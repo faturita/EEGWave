@@ -1,0 +1,88 @@
+_______________________________________________________________________________
+Copyleft (l) 2010 by Ikaro Silva, All Rights Reserved
+Contact Ikaro Silva (ikarosilva@ieee.org)
+
+   This library (Biosignal Toolbox) is free software; you can redistribute
+   it and/or modify it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+   02111-1307  USA
+
+_______________________________________________________________________________
+
+
+Biosignal Toolbox Version 1.0
+
+Biosignal Toolbox is a collection of general M-functions that perform some useful signal processing,
+analysis, or utility support for the investigation of biological signals (EEG, evoked potentials 
+and non-stationary noise enviroments etc). Most of these functions, however, are generic 
+enough to be applicable to other fields or signals. 
+
+Some of these functions I wrote as I came across interesting concepts in textbooks and
+articles. As this is still a work in progress, if a function reference is unclear to you please
+contact the author at ikarosilva@ieee.org and I will try to update as soon as possible.
+
+Please report any bug or issue to ikarosilva@ieee.org. Thank you!
+
+The following is a Table of contents describing the Toolbox:
+Table Of Contents:
+ 
+ 
+Adaptive Algorithms
+-------------------------------------
+alms               - Adaptive Least Mean Square Filter
+arls               - Adaptive Recursive Least Square Filter
+gall               - Gradient Adaptive Laguerre Lattice Filter
+harmonic_est       - LMS Harmonic Frequency Tracking
+harmonic_recon     - Harmonic Reconstrunction of Signal based on harmonic_est
+kallman            - Kallman estimate of the best linear combinations of
+                      a set of signal to estimate a desired response                    
+                      
+Filters
+-------------------------------------    
+reson              - Design a resonant filter 
+notch              - Design a notch filter
+
+Graphs
+-------------------------------------    
+eegplot            - Plots EEG data on
+fftplot            - Plots spectral estimate based on th esimple FFT output
+
+
+Stationary_Analysis
+------------------------------------- 
+slength            - Computes the signal length (minimum phase signal should yield minimum length)
+acf                - Computes the ACF (autocorrelation function) distance in the signal
+sem                - Computes the SEM (spectral error measure) distance in the signal 
+
+
+Statistical_Test
+------------------------------------- 
+israndom           - Non-parametric test for determining if a sequence is random.
+runstest           - Calculates runstest for randomness
+std_err            - Estimates the standard error for Standard error for the mean, proportion and estimates
+
+
+Statistical_Processing
+------------------------------------- 
+least_sqfit        - Implements generic Least Square Fitting for linear models.
+lda                - Linear Discriminant Analysis
+woody              - Function for performing Woody and Thornton time aligned averages
+wnsfmp             - Function for peforming weighted averaging and estimating SNR under non-stationary noise 
+                     conditions
+roc_curve          - Function for plotting and calculating the area under an ROC curve.
+                     
+Utilities
+------------------------------------- 
+backup             - WINDOWS ONLY. Wrapper to the xcopy function for performing backup
+get_varargin       - function for populating variables in a M-function
+changeFS           - funcstion for changing the sampling frequency of a signal
