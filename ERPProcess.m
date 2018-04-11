@@ -453,7 +453,7 @@ for subject=subjectRange
                         for channel=channelRange
                             feature = rsignal{i}(:,channel);
 
-                            s=chainCode(1:64,rsignal{i}(:,channel),1,31,0,0);
+                            s=chainCode(1:64,rsignal{i}(:,channel),1,63,0,0);
                             feature = s.chainSHCC';
                             
                             F(channel,label,epoch).hit = hit{subject}{trial}{classes}{i};
@@ -463,7 +463,34 @@ for subject=subjectRange
                         end
                     end
                 end
-            end             
+            end  
+        case 8
+            for trial=1:35
+                for classes=1:120/(globalnumberofepochs+1)
+                    for i=1:12
+                        epoch=epoch+1;
+                        label = hit{subject}{trial}{classes}{i};
+                        labelRange(epoch) = label;
+                        stimRange(epoch) = i;
+                        DS = [];
+                        rsignal{i}=routput{subject}{trial}{classes}{i};
+                        
+                        feature = [];
+                        
+                        for channel=channelRange
+                            feature = rsignal{i}(:,channel);
+
+                            s=chainCode(1:64,rsignal{i}(:,channel),1,63,0,0);
+                            feature = s.chainSHCC';
+                            
+                            F(channel,label,epoch).hit = hit{subject}{trial}{classes}{i};
+                            F(channel,label,epoch).descriptors = feature;
+                            F(channel,label,epoch).frames = [];
+                            F(channel,label,epoch).stim = i;
+                        end
+                    end
+                end
+            end 
             
     end
     epochRange=1:epoch;
