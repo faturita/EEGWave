@@ -1,11 +1,9 @@
 % EEG(subject,trial,flash)
-function [EEG, labelRange, stimRange] = prepareEEG(Fs, windowsize, downsize, flashespertrial, subjectRange,channelRange,amplitude)
+function [EEG, labelRange, stimRange] = prepareEEG(Fs, windowsize, downsize, flashespertrial, subjectRange,channelRange,amplitude,bandpass,delaylag,randomdelay,randomamplitude)
 
 artifactcount = 0;   
 
 channels={ 'Fz'  ,  'Cz',    'P3' ,   'Pz'  ,  'P4'  , 'PO7'   , 'PO8',  'Oz'};
-
-bandpass = true;
             
 for subject=subjectRange
     clear data.y_stim
@@ -14,7 +12,7 @@ for subject=subjectRange
     clear data.trial
 
     load(sprintf('./signals/p300-subject-%02d.mat', subject));
-data.X = DrugSignal(data,amplitude);
+data = DrugSignal(data,amplitude,delaylag,randomdelay,randomamplitude);
     dataX = data.X;
  dataX = notchsignal(data.X, channelRange,Fs);
     datatrial = data.trial;
@@ -30,7 +28,7 @@ time2= 279948.995187305;
     %dataX = filterbyica(dataX,[1 2]);
 
     if (bandpass)
-        dataX = bandpasseeg(dataX, channelRange,Fs,3);
+        dataX = bandpasseeg(dataX, channelRange,Fs,3,true);
     end
     
     dataX = decimatesignal(dataX,channelRange,downsize); 

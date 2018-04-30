@@ -1,4 +1,4 @@
-function X = DrugSignal(data,amplitude)
+function data = DrugSignal(data,amplitude,delaylag, randomdelay, randomamplitude)
 
 routput=open('routput.mat');
 routput = routput.routput;
@@ -33,41 +33,57 @@ subjectRange=subject;
 
 windowsize=1;
 
-for subject=subjectRange
-    clear data.y_stim
-    clear data.y
-    clear data.X
-    clear dataX;
-    clear data.trial
-    load(sprintf('./signals/p300-subject-%02d.mat', subject));
+fullrange=1:250;
+cutrange=37:249;
 
-    datatrial = data.trial;
+w = gausswin(size(template1(cutrange,:),1));
+wf = gausswin(size(template1(fullrange,:),1));
 
-    artifact = false;
-    for trial=1:size(datatrial,2)
-        for flash=1:flashespertrial
-            
-            start = data.flash((trial-1)*120+flash,1);
-            duration = data.flash((trial-1)*120+flash,2);
-            
-            if (ceil(Fs/downsize)*windowsize>size(data.X,1)-ceil(start/downsize))
-                data.X = [data.X; zeros(ceil(Fs/downsize)*10-size(data.X,1)+ceil(start/downsize)+1,8)];
-            end   
+datatrial = data.trial;
 
-            %output = extract(data.X, ...
-             %   (ceil(start/downsize)), ...
-              %  floor(Fs/downsize)*windowsize);
-            
-            stim = data.flash((trial-1)*120+flash,3);
-            label = data.flash((trial-1)*120+flash,4); 
+artifact = false;
+for trial=1:size(datatrial,2)
+    for flash=1:flashespertrial
 
-            if (label==2)
-                data.X(start:start+(Fs*windowsize)-1,:) = data.X(start:start+(Fs*windowsize)-1,:)+template1(:,:)*amplitude;
-            end
-            
+        start = data.flash((trial-1)*120+flash,1);
+        duration = data.flash((trial-1)*120+flash,2);
+
+        if (ceil(Fs/downsize)*windowsize>size(data.X,1)-ceil(start/downsize))
+            data.X = [data.X; zeros(ceil(Fs/downsize)*10-size(data.X,1)+ceil(start/downsize)+1,8)];
+            data.y = [data.y; zeros(ceil(Fs/downsize)*10-size(data.y,1)+ceil(start/downsize)+1,1)];
+            data.y_stim = [data.y_stim; zeros(ceil(Fs/downsize)*10-size(data.y_stim,1)+ceil(start/downsize)+1,1)];
+        end   
+
+        %output = extract(data.X, ...
+         %   (ceil(start/downsize)), ...
+          %  floor(Fs/downsize)*windowsize);
+
+        stim = data.flash((trial-1)*120+flash,3);
+        label = data.flash((trial-1)*120+flash,4); 
+        
+        if (randomdelay)
+            delaylag = randi(floor(Fs*windowsize*0.4),1,1)-floor(Fs*windowsize*0.4);
         end
+        
+        t1 = template1;
+         
+        if (randomamplitude)
+            reductionrate=randi(100,1)/100;
+        
+            for ch=1:8
+                t1(cutrange,ch) = template1(cutrange,ch)-(template1(cutrange,ch)*reductionrate).*w;
+            end        
+        end
+        
+        if (label==2)
+            data.X(start:start+(Fs*windowsize)-1,:) = data.X(start:start+(Fs*windowsize)-1,:)+template1(:,:)*amplitude;
+            for ch=1:8
+                %template1(cutrange,ch) = template1(cutrange,ch)-(template1(cutrange,ch)*0.9).*w;
+                %data.X(start-delaylag:start+(Fs*windowsize)-delaylag-1,ch) = data.X(start-delaylag:start+(Fs*windowsize)-delaylag-1,ch) + (t1(fullrange,ch)*amplitude).*wf;
+            end
+        end
+
     end
 end
-X = data.X;
 
 end

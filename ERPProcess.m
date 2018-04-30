@@ -65,21 +65,28 @@ show=0;
 downsize=15;
 applyzscore=true;
 featuretype=1;
-distancetype='cosine';
+distancetype='euclidean';
 classifier=6;
 
 artifactcheck=false;
+  
+    %globalappyzscore=false;
+    %globalclassifier=4;
+    %globalfeaturetype=5;
+    %globalsignalgain=1.2;
     
 applyzscore=globalappyzscore;
 classifier=globalclassifier;
 featuretype=globalfeaturetype;
+randomdelay=globalrandomdelay;
+randomamplitude=globalrandomamplitude;
 
-
+%downsize=1;timescale=1;amplitude=1;
 
 % =====================================
 
 % EEG(subject,trial,flash)
-EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain);
+EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,0,randomdelay,randomamplitude);
 
 % CONTROL
 %EEG = randomizeEEG(EEG);
@@ -144,7 +151,8 @@ for subject=subjectRange
     end
 end
 
-mpdict = wmpdictionary(64,'LstCpt',{{'wpsym4',2},'dct'});
+signalsize = globalsignalsize;
+mpdict = wmpdictionary(signalsize,'LstCpt',{{'wpsym4',2},'dct'});
            
                             
 for subject=subjectRange
@@ -243,6 +251,10 @@ for subject=subjectRange
                             %                qKS=ceil(0.20*(Fs)*timescale):floor(0.20*(Fs)*timescale+(Fs)*timescale/4-1);
                             %             else
                             qKS=sqKS(subject);
+                            if (signalsize==250)
+                                siftscale(1) = 12;
+                                qKS=sqKS(subject)+79;
+                            end
                             %qKS=qKS-10:qKS+10;
                             %qKS=qKS';
                             %zerolevel=0;
@@ -252,7 +264,6 @@ for subject=subjectRange
                             %qKS=-10+sqKS(subject):10+sqKS(subject);
                             %qKS=qKS';
                             
-                            qKS=sqKS(subject);
                             if (invariantlocation)
                                 [pks,loc] = findpeaks(rsignal{i}(:,channel));
                                 f=loc(ceil(size(loc,1)/2));
@@ -453,7 +464,7 @@ for subject=subjectRange
                         for channel=channelRange
                             feature = rsignal{i}(:,channel);
 
-                            s=chainCode(1:64,rsignal{i}(:,channel),1,63,0,0);
+                            s=chainCode(1:size(routput{subject}{trial}{classes}{1},1),rsignal{i}(:,channel),1,size(routput{subject}{trial}{classes}{1},1)-1,0,0);
                             feature = s.chainSHCC';
                             
                             F(channel,label,epoch).hit = hit{subject}{trial}{classes}{i};
@@ -480,7 +491,7 @@ for subject=subjectRange
                         for channel=channelRange
                             feature = rsignal{i}(:,channel);
 
-                            s=chainCode(1:64,rsignal{i}(:,channel),1,63,0,0);
+                            s=chainCode(1:size(routput{subject}{trial}{classes}{1},1),rsignal{i}(:,channel),1,size(routput{subject}{trial}{classes}{1},1)-1,0,0);
                             feature = s.chainSHCC';
                             
                             F(channel,label,epoch).hit = hit{subject}{trial}{classes}{i};
@@ -491,6 +502,33 @@ for subject=subjectRange
                     end
                 end
             end 
+        case 9
+            for trial=1:35
+                for classes=1:120/(globalnumberofepochs+1)
+                    for i=1:12
+                        epoch=epoch+1;
+                        label = hit{subject}{trial}{classes}{i};
+                        labelRange(epoch) = label;
+                        stimRange(epoch) = i;
+                        DS = [];
+                        rsignal{i}=routput{subject}{trial}{classes}{i};
+                        
+                        feature = [];
+                        
+                        for channel=channelRange
+                            feature = rsignal{i}(:,channel);
+
+                            feature = MIDSFeatureSignal(rsignal{i}(:,channel),1/Fs)
+                            
+                            F(channel,label,epoch).hit = hit{subject}{trial}{classes}{i};
+                            F(channel,label,epoch).descriptors = feature;
+                            F(channel,label,epoch).frames = [];
+                            F(channel,label,epoch).stim = i;
+                        end
+                    end
+                end
+            end 
+            
             
     end
     epochRange=1:epoch;

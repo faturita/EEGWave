@@ -1,3 +1,4 @@
+rng(756312);
 indata = rand( 1, 7777 ); % generate random data points 
 for i = 4000:7000 % generate change of data complexity 
 indata( i ) = 4*indata( i - 1 )*( 1 - indata( i - 1 ) ); 
@@ -16,30 +17,49 @@ figure;plot(indata);
 
 signal = indata;
 
-signal=signal(1:120);
-
+signal=signal(1:20);
 sig = signal;
 
-[a,b,feature] = MIDSFeature(sig,Ts);
+locs = 1:size(sig,2);
 
-subplot(3,1,1);
-plot(sig);
-subplot(3,1,2);
-plot(a,sig(a));
+for i=1:70
 
-%sig(b) = interp1(1:size(a,2),sig(a),b,'lineal')
+    [a,b,feature] = MIDSFeature(sig,Ts,locs);
 
-subplot(3,1,3);
-plot(sig)
+    subplot(3,1,1);
+    plot(signal);
+    subplot(3,1,2);
+    plot(a,signal(a));
 
-[aa,b,feature2] = MIDSFeature(feature,Ts);
+    %sig(b) = interp1(1:size(a,2),sig(a),b,'lineal')
 
-subplot(3,1,1);
-plot(sig);
-subplot(3,1,2);
-plot(a,feature);
+    subplot(3,1,3);
+    plot(feature)
+    
+    sig = feature;
+    locs = a;
+end
+    
 
-%sig(b) = interp1(1:size(a,2),sig(a),b,'lineal')
+% [aa,b,feature2] = MIDSFeature(feature,Ts,a);
+% 
+% subplot(3,1,1);
+% plot(sig);
+% subplot(3,1,2);
+% plot(a,feature);
+% 
+% %sig(b) = interp1(1:size(a,2),sig(a),b,'lineal')
+% 
+% % x,y son los valores de la funcion y xi los que quiero interp
+% %yi = interp1q(x,y,xi); 
+% 
+% 
+% subplot(3,1,3);
+% plot(aa,feature2);
 
-subplot(3,1,3);
-plot(a(aa),feature2);
+%%
+newsignal = linearfillmissingvalues(signal,a);
+
+subplot(2,1,1);plot(a,signal(a));
+subplot(2,1,2);plot(1:size(signal,2),newsignal);
+
