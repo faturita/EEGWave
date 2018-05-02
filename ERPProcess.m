@@ -244,7 +244,7 @@ for subject=subjectRange
                             [eegimg, DOTS, zerolevel] = eegimage(channel,rsignal{i},imagescale,1, false,minimagesize);
                             %siftscale(1) = 11.7851;
                             %siftscale(2) = (height-1)/(sqrt(2)*15);
-                            saveeegimage(subject,epoch,label,channel,eegimg);
+                            %saveeegimage(subject,epoch,label,channel,eegimg);
                             zerolevel = size(eegimg,1)/2;
                             
                             %             if ((size(find(trainingRange==epoch),2)==0))

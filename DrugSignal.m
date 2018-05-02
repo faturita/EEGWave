@@ -76,10 +76,13 @@ for trial=1:size(datatrial,2)
         end
         
         if (label==2)
-            data.X(start:start+(Fs*windowsize)-1,:) = data.X(start:start+(Fs*windowsize)-1,:)+template1(:,:)*amplitude;
+            %data.X(start:start+(Fs*windowsize)-1,:) = data.X(start:start+(Fs*windowsize)-1,:)+template1(:,:)*amplitude;
             for ch=1:8
                 %template1(cutrange,ch) = template1(cutrange,ch)-(template1(cutrange,ch)*0.9).*w;
                 %data.X(start-delaylag:start+(Fs*windowsize)-delaylag-1,ch) = data.X(start-delaylag:start+(Fs*windowsize)-delaylag-1,ch) + (t1(fullrange,ch)*amplitude).*wf;
+                data.X(start-delaylag:start+(Fs*windowsize)-delaylag-1,ch) = ...
+                    data.X(start-delaylag:start+(Fs*windowsize)-delaylag-1,ch) + ...
+                    (t1(fullrange,ch)*amplitude);
             end
         end
 

@@ -9,8 +9,6 @@ globalrepts7=[];
 globalrepts8=[];
 globalrepts9=[];
 globalrepts10=[];
-globalrandomdelay=true;
-globalrandomamplitude=false;
 globalsignalgain=2.2;
 globalsignalsize=64;
 for globalrepetitions=1:10
@@ -109,12 +107,5 @@ axis([0 10 0 1.05]);
 %set(hy,'fontSize',40);
 set(gcf, 'Position', [1, 1, 730, 329])
 
-% if (globalrandomdelay)
-%     save('performancerandomdelay.mat');
-% elseif (globalrandomamplitude)
-%     save('performancerandomamplitude.mat');
-% else
-%     save('performance.mat');
-% end
 
 
