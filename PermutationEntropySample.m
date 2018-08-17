@@ -11,5 +11,8 @@ ax1 = subplot( 2, 1, 1 ); plot( indata, 'k', 'LineWidth', 0.2 );
 grid on; title( 'Original time series' ); 
 ax2 = subplot( 2, 1, 2 ); 
 plot( length(indata) - length(outdata)+1:length(indata), outdata, 'k', 'LineWidth', 0.2 ); 
+%plot(  outdata, 'k', 'LineWidth', 0.2 ); 
+
 grid on; title( 'Values of permutation entropy' ); 
 linkaxes( [ ax1, ax2 ], 'x' );
+k = size(indata,2) - (order+1-1) * delay;

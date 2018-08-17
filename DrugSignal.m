@@ -1,5 +1,17 @@
 function data = DrugSignal(data,amplitude,delaylag, randomdelay, randomamplitude)
 
+if (nargin<5)
+    randomamplitude = false;
+end
+
+if (nargin<4)
+    randomdelay = false;
+end
+
+if (nargin<3)
+    delaylag = 0;
+end
+
 routput=open('routput.mat');
 routput = routput.routput;
 

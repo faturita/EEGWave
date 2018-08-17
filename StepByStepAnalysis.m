@@ -18,7 +18,7 @@ for subject=subjectRange
     clear dataX;
     clear data.trial
     load(sprintf('./signals/p300-subject-%02d.mat', subject));
-    data.X = DrugSignal(data,10);
+    data = DrugSignal(data,10);
 
     dataX = notchsignal(data.X, channelRange,Fs);
 
