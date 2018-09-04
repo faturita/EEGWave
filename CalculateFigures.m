@@ -3,26 +3,26 @@ close all
 globalrandomdelay=false;
 globalrandomamplitude=false;
 run('PerformanceBenchmark.m');
-save('performancesvm.mat');
+save('performances2.mat');
 clear all
 close all
 globalrandomdelay=true;
 globalrandomamplitude=false;
 run('PerformanceBenchmark.m');
-save('performancerandomdelaysvm.mat');
+save('performancerandomdelay2.mat');
 clear all
 close all
 globalrandomdelay=false;
 globalrandomamplitude=true;
 run('PerformanceBenchmark.m');
-save('performancerandomamplitudesvm.mat');
+save('performancerandomamplitude2.mat');
 
 %%
 clear all
 close all
-load('performancesvm.mat');
+load('performances2.mat');
 run('PlotPerformanceFigure.m');
-load('performancerandomdelaysvm.mat');
+load('performancerandomdelay2.mat');
 run('PlotPerformanceFigure.m');
-load('performancerandomamplitudesvm.mat');
+load('performancerandomamplitude2.mat');
 run('PlotPerformanceFigure.m');
