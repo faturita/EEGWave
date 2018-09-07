@@ -1,8 +1,8 @@
 function [ErrorPerChannel,SigmaPerChannel] = CrossValidatedSpellerPerformance(epochRange,subjectRange,SBJ,channelRange,papplyzscore,pclassifier,pfeaturetype,prandomdelay,prandomamplitude);
 
-T=10;
+T=35;
 KFolds=2;
-E = zeros(T,size(channelRange,2));
+E = zeros(T,length(subjectRange),size(channelRange,2));
 
 for t=1:T
 
@@ -15,7 +15,7 @@ for t=1:T
     end
 
     N = zeros(KFolds,1);
-    EPs = zeros(KFolds,size(channelRange,2));    
+    EPs = zeros(KFolds,length(subjectRange),size(channelRange,2));    
     for f=1:KFolds
 
         trainingRange=defold(kfolds, f);
@@ -27,12 +27,15 @@ for t=1:T
         end
 
         spellingacc = doerpclassification(subjectRange,channelRange,SBJ,pclassifier);
-
+        for subject=subjectRange
+            for channel=channelRange
+                EPs(f,subject,channel) = 1-spellingacc(subject,channel);
+            end
+        end
     end
     for subject=subjectRange
         for channel=channelRange
-            EPs(f,channel) = 1-spellingacc(subject,channel);
-            E(t,subject,channel) = mean(EPs(:,channel));
+            E(t,subject,channel) = mean(EPs(:,subject,channel));
         end
     end
 end

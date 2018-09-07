@@ -1,24 +1,5 @@
-%%
-% MP1
-globalsignalgain=2.2;
-globalsignalsize=64;
-for globalrepetitions=1:10
-globalappyzscore=false;
-globalclassifier=6;
-globalfeaturetype=5;
-globalrandomdelay=false;
-globalrandomamplitude=false;
 
-channelRange=1:8;
-
-[epochRange, F, SBJ] = doerpprocess(trainingRange,testRange,globalappyzscore,globalclassifier,globalfeaturetype,globalrandomdelay,globalrandomamplitude,globalrepetitions,globalsignalgain,globalsignalsize);
-
-[ErrorPerChannel, SigmaPerChannel] = CrossValidatedSpellerPerformance(epochRange,subjectRange,SBJ,channelRange,globalappyzscore,globalclassifier,globalfeaturetype,globalrandomdelay,globalrandomamplitude);
-%globalrepts1 = [globalrepts1 totals(:,6)];  
-%globalchannel1 = totals(:,5);
-end
-fdsfds
-%%
+%
 globalrepts1=[];
 globalrepts2=[];
 globalrepts3=[];

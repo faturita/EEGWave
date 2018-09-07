@@ -84,7 +84,7 @@ for subject=subjectRange
     
     S = 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO';
     a=floor((testRange-1)/12);
-    a=unique(a);
+    a=unique(a,'stable');
     a=a+1;
     
     S = repmat(S,nbofclassespertrial/12);
