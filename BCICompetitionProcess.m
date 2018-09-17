@@ -11,15 +11,15 @@ clear globalaccij2
 
 rng(396545);
 
-globalnumberofepochspertrial=10;
+globalnumberofepochspertrial=15;
 globalaverages= cell(2,1);
 globalartifacts = 0;
-globalreps=10;
+globalreps=15;
 globalnumberofepochs=(2+10)*globalreps-1;
 
 clear mex;clearvars  -except global*;close all;clc;
 
-nbofclassespertrial=(2+10)*(10/globalreps);
+nbofclassespertrial=(2+10)*(15/globalreps);
 breakonepochlimit=(2+10)*globalrepetitions-1;
 
 % Clean all the directories where the images are located.
@@ -33,19 +33,25 @@ cleanimagedirectory();
 
 %     'Fz'    'Cz'    'Pz'    'Oz'    'P3'    'P4'    'PO7'    'PO8'
 
-channels={ 'Fz'  ,  'Cz',    'P3' ,   'Pz'  ,  'P4'  , 'PO7'   , 'PO8',  'Oz'};
+channels={ 'FC5','FC3','FC1','FCZ', ...
+'FC2','FC4','FC6','C5',...
+'C3','C1','Cz','C2',...
+'C4','C6','CP5','CP3',...
+'CP1','CPz','CP2','CP4',...
+'CP6','FP1','FPz','FP2',...
+'AF7','AF3','AFz','AF4',...
+'AF8','Fz','F5','F3',...
+'F1','Fz','F2','F4',...
+'F6','F8','FT7','FT8',...
+'T7','T8','T9','T10',...
+'TP7','TP8','P7','P5',...
+'P3','P1','Pz','P2',...
+'P4','P6','P8','PO7',...
+'PO3','POz','PO4','PO8',...
+'O1','Oz','O2','Iz'}
 
 
 % Parameters ==========================
-subjectRange=[1 2 3 4 6 7 8 9 10 11 13 14 15 16 17 18 19 20 21 22 23];
-subjectRange=[1 3 4 6 7 9 10 11 13 14 16 17 18 19 20 21 22 23];
-%2,15, 8 high impeadance empty trials.
-subjectRange=[1 11 14   16 17 20 22 23];
-%subjectRange=22;
-subjectRange=21;
-epochRange = 1:120*7*5;
-channelRange=1:8;
-labelRange = [];
 siftscale = [3 3];  % Determines lamda length [ms] and signal amp [microV]
 imagescale=4;    % Para agarrar dos decimales NN.NNNN
 timescale=4;
@@ -58,7 +64,7 @@ artifactcheck=true;
 
 invariantlocation=false;
 siftdescriptordensity=1;
-Fs=250;
+Fs=240;
 windowsize=1;
 expcode=2400;
 show=0;
@@ -69,59 +75,53 @@ distancetype='euclidean';
 classifier=6;
 
 artifactcheck=false;
+
   
-    globalappyzscore=false;
-    globalclassifier=4;
-    globalfeaturetype=5;
-    globalsignalgain=1.2;
+    %globalappyzscore=false;
+    %globalclassifier=4;
+    %globalfeaturetype=5;
+    %globalsignalgain=1.2;
+    %globalsignalsize=60;
     
-applyzscore=globalappyzscore;
-classifier=globalclassifier;
-featuretype=globalfeaturetype;
-randomdelay=globalrandomdelay;
-randomamplitude=globalrandomamplitude;
+% applyzscore=globalappyzscore;
+% classifier=globalclassifier;
+% featuretype=globalfeaturetype;
+% randomdelay=globalrandomdelay;
+% randomamplitude=globalrandomamplitude;
 
 %downsize=1;timescale=1;amplitude=1;
 
 % =====================================
 
 % EEG(subject,trial,flash)
-EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,0,randomdelay,randomamplitude);
+%EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,0,randomdelay,randomamplitude);
+imagescale=4;
+timescale=4*2;
+siftscale = [ 3*2 3];
+qKS=55;
+minimagesize=floor(sqrt(2)*15*siftscale(2)+1);
+amplitude=4;
+channelRange=1:64;
+downsize=16;
+[EEG, stimRange, labelRange] = loadBCICompetition(Fs, windowsize, downsize, 180, 1:1,channelRange);
+subjectRange=1:1;
 
 % CONTROL
 %EEG = randomizeEEG(EEG);
 
-trainingRange = 1:nbofclassespertrial*15;
-
 tic
 Fs=floor(Fs/downsize);
 
-sqKS = [37; 16; 13; 45; 47; 35; 31; 28;39; 33;   28;  ...
-    33; 33; 35; ...
-    33; 50; ...
-    37; ...
-    33; 33; 33; ...
-    33; 29; ...
-    39];
-
- sqKS = [37; -1;...
-     16;    13;  -1;  45;    47; -1; 35; 31; 28;...
-     -1; 39;    35;...
-     -1; 50;...
-     37;...
-     43;    36;    33;...
-     28;...
-     29;...
-     39];
+sqKS=[60];
 
 %%
 % Build routput pasting epochs toghether...
 for subject=subjectRange
-    for trial=1:35
-        for classes=1:120/(globalnumberofepochs+1);for i=1:12 hit{subject}{trial}{classes}{i} = 0; end; end
-        for classes=1:120/(globalnumberofepochs+1);for i=1:12 routput{subject}{trial}{classes}{i} = []; end; end
+    for trial=1:73
+        for classes=1:180/(globalnumberofepochs+1);for i=1:12 hit{subject}{trial}{classes}{i} = 0; end; end
+        for classes=1:180/(globalnumberofepochs+1);for i=1:12 routput{subject}{trial}{classes}{i} = []; end; end
         processedflashes=0;
-        for flash=1:120
+        for flash=1:180
             classes = floor((flash-1)/(globalnumberofepochs+1))+1;
             if ((breakonepochlimit>0) && (processedflashes > breakonepochlimit))
                 break;
@@ -139,15 +139,15 @@ for subject=subjectRange
 end
 
 for subject=subjectRange
-    for trial=1:35
-        for classes=1:120/(globalnumberofepochs+1);for i=1:12 rcounter{subject}{trial}{classes}{i} = 0; end; end
-        for flash=1:120
+    for trial=1:73
+        for classes=1:180/(globalnumberofepochs+1);for i=1:12 rcounter{subject}{trial}{classes}{i} = 0; end; end
+        for flash=1:180
             classes = floor((flash-1)/(globalnumberofepochs+1))+1;
             rcounter{subject}{trial}{classes}{EEG(subject,trial,flash).stim} = rcounter{subject}{trial}{classes}{EEG(subject,trial,flash).stim}+1;
         end
         % Check if all the epochs contain 10 repetitions.
         
-        for classes=1:120/(globalnumberofepochs+1); for i=1:12 assert( rcounter{subject}{trial}{classes}{i} == (120/nbofclassespertrial) ); end; end
+        for classes=1:180/(globalnumberofepochs+1); for i=1:12 assert( rcounter{subject}{trial}{classes}{i} == (180/nbofclassespertrial) ); end; end
     end
 end
 
@@ -158,15 +158,15 @@ mpdict = wmpdictionary(signalsize,'LstCpt',{{'wpsym4',2},'dct'});
 for subject=subjectRange
     h=[];
     Word=[];
-    for trial=1:35
-        for classes=1:120/(globalnumberofepochs+1)
+    for trial=1:73
+        for classes=1:180/(globalnumberofepochs+1)
             hh = [];
             for i=1:12
                 rput{i} = routput{subject}{trial}{classes}{i};
                 channelRange = (1:size(rput{i},2));
                 channelsize = size(channelRange,2);
                 
-                assert( globalrepetitions<10 || artifactcheck || size(rput{i},1)/ceil(Fs*windowsize) == rcounter{subject}{trial}{classes}{i}, 'Something wrong with PtP average. Sizes do not match.');
+                assert( globalrepetitions<15 || artifactcheck || size(rput{i},1)/ceil(Fs*windowsize) == rcounter{subject}{trial}{classes}{i}, 'Something wrong with PtP average. Sizes do not match.');
                 
                 %rput{i}=reshape(rput{i},[ceil(Fs*windowsize) size(rput{i},1)/ceil(Fs*windowsize) channelsize]);
                 rput{i}=reshape(rput{i},[(Fs*windowsize) size(rput{i},1)/(Fs*windowsize) channelsize]); 
@@ -194,8 +194,8 @@ for subject=subjectRange
 end
 
 for subject=subjectRange
-    for trial=1:35
-        for classes=1:120/(globalnumberofepochs+1)
+    for trial=1:73
+        for classes=1:180/(globalnumberofepochs+1)
             for i=1:12
                 
                 rmean{i} = routput{subject}{trial}{classes}{i};
@@ -230,8 +230,8 @@ for subject=subjectRange
     
     switch (featuretype)
         case 1
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -287,8 +287,8 @@ for subject=subjectRange
                 end
             end
         case 2
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -313,8 +313,8 @@ for subject=subjectRange
                 end
             end
         case 3
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -362,8 +362,8 @@ for subject=subjectRange
         case 4
             
             
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -388,8 +388,8 @@ for subject=subjectRange
             end   
         case 5
 
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -421,8 +421,8 @@ for subject=subjectRange
                 end
             end  
         case 6
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -449,8 +449,8 @@ for subject=subjectRange
                 end
             end              
         case 7
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -476,8 +476,8 @@ for subject=subjectRange
                 end
             end  
         case 8
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -503,8 +503,8 @@ for subject=subjectRange
                 end
             end 
         case 9
-            for trial=1:35
-                for classes=1:120/(globalnumberofepochs+1)
+            for trial=1:73
+                for classes=1:180/(globalnumberofepochs+1)
                     for i=1:12
                         epoch=epoch+1;
                         label = hit{subject}{trial}{classes}{i};
@@ -531,9 +531,11 @@ for subject=subjectRange
             
             
     end
+    % ACORDATE QUE SI k>1 LA CLASIFICACION NO DA PERFECTA AUNQUE
+    % SE USE EL MISMO CONJUNTO DE ENTRENAMIENTO QUE DE TESTEO
     epochRange=1:epoch;
-    trainingRange = 1:nbofclassespertrial*15;
-    testRange=nbofclassespertrial*15+1:min(nbofclassespertrial*35,epoch);
+    trainingRange = 1:nbofclassespertrial*42;
+    testRange=nbofclassespertrial*42+1:min(nbofclassespertrial*73,epoch);
     
     %trainingRange=1:nbofclasses*35;
     
@@ -623,9 +625,10 @@ end
 for subject=subjectRange
     % '2'    'B'    'A'    'C'    'I'    '5'    'R'    'O'    'S'    'E'    'Z'  'U'    'P'    'P'    'A'
     % 'G' 'A' 'T' 'T' 'O'    'M' 'E' 'N''T' 'E'   'V''I''O''L''A'  'R''E''B''U''S'
-    Speller = SpellMe(F,channelRange,16*nbofclassespertrial/12:35*nbofclassespertrial/12+(nbofclassespertrial/12-1),labelRange,trainingRange,testRange,SBJ(subject).SC);
+    Speller = SpellMe(F,channelRange,43:73,labelRange,trainingRange,testRange,SBJ(subject).SC,true);
     
-    S = 'MANSOCINCOJUEGOQUESO';
+    S = 'FOODMOOTHAMPIECAKETUNAZYGOT4567';    
+    
     S = repmat(S,nbofclassespertrial/12);
     S = reshape( S, [1 size(S,1)*size(S,2)]);
     S=S(1:size(S,2)/(nbofclassespertrial/12));
