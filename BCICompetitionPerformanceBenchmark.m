@@ -11,7 +11,7 @@ globalrepts8=[];
 globalrepts9=[];
 globalrepts10=[];
 globalsignalgain=2.2;
-globalsignalsize=120;
+globalsignalsize=168;
 for globalrepetitions=1:15
     
     % MP1

@@ -99,7 +99,9 @@ for subject=subjectRange
                             stimRange(end+1) = StimulusCode(sample);
                             %EEG(subject,trial,flash).EEG = signal(sample:sample+240-1,channelRange);
                             
-                            output = signal(ceil(sample/downsize):ceil(sample/downsize)+240/downsize-1,1:size(signal,2));
+                            output = signal(ceil(sample/downsize):ceil(sample/downsize)+ceil(240*windowsize/downsize)-1,...
+                                1:size(signal,2)...
+                                );
                           
                             EEG(subject,trial,flash).EEG = output;
                             

@@ -48,7 +48,7 @@ channels={ 'FC5','FC3','FC1','FCZ', ...
 'P3','P1','Pz','P2',...
 'P4','P6','P8','PO7',...
 'PO3','POz','PO4','PO8',...
-'O1','Oz','O2','Iz'}
+'O1','Oz','O2','Iz'};
 
 
 % Parameters ==========================
@@ -71,10 +71,13 @@ show=0;
 downsize=15;
 applyzscore=true;
 featuretype=1;
-distancetype='euclidean';
+distancetype='cosine';
 classifier=6;
 
-artifactcheck=false;
+%artifactcheck=false;
+
+windowsize=1.4;
+
 
   
     %globalappyzscore=false;
@@ -83,11 +86,11 @@ artifactcheck=false;
     %globalsignalgain=1.2;
     %globalsignalsize=60;
     
-% applyzscore=globalappyzscore;
-% classifier=globalclassifier;
-% featuretype=globalfeaturetype;
-% randomdelay=globalrandomdelay;
-% randomamplitude=globalrandomamplitude;
+applyzscore=globalappyzscore;
+classifier=globalclassifier;
+featuretype=globalfeaturetype;
+randomdelay=globalrandomdelay;
+randomamplitude=globalrandomamplitude;
 
 %downsize=1;timescale=1;amplitude=1;
 
@@ -112,7 +115,7 @@ subjectRange=1:1;
 tic
 Fs=floor(Fs/downsize);
 
-sqKS=[60];
+sqKS=[80];
 
 %%
 % Build routput pasting epochs toghether...
@@ -168,8 +171,11 @@ for subject=subjectRange
                 
                 assert( globalrepetitions<15 || artifactcheck || size(rput{i},1)/ceil(Fs*windowsize) == rcounter{subject}{trial}{classes}{i}, 'Something wrong with PtP average. Sizes do not match.');
                 
-                %rput{i}=reshape(rput{i},[ceil(Fs*windowsize) size(rput{i},1)/ceil(Fs*windowsize) channelsize]);
-                rput{i}=reshape(rput{i},[(Fs*windowsize) size(rput{i},1)/(Fs*windowsize) channelsize]); 
+                if (floor(Fs*windowsize)==(Fs*windowsize))
+                    rput{i}=reshape(rput{i},[(Fs*windowsize) size(rput{i},1)/(Fs*windowsize) channelsize]); 
+                else
+                    rput{i}=reshape(rput{i},[ceil(Fs*windowsize) size(rput{i},1)/ceil(Fs*windowsize) channelsize]);
+                end
                 
                 %dly = de2bi(globaldelays,10);
                 %rput{i} = TimeWarping(rput{i},dly,channelRange);
