@@ -31,7 +31,7 @@ output(125,8) = 50;
  
 [eegimg, DOTS, zerolevel] = eegimage(8,output,imagescale,timescale, false,minimagesize);
 figure;imshow(eegimg);
-pause
+
 
 
 %%
@@ -41,7 +41,7 @@ pause
 
 [eegimg, DOTS, zerolevel, height] = eegimageinvariant(8,output,imagescale,timescale, false,minimagesize);
 figure;imshow(eegimg);
-pause  
+  
 
 %%
 output = extract(data.X, ...
@@ -50,15 +50,17 @@ output = extract(data.X, ...
 
 [eegimg, DOTS, zerolevel] = eegimage(8,output,imagescale,timescale, false,minimagesize);
 figure;imshow(eegimg);
-pause
-
-
+imwrite(eegimg,'plottingsample.png');
+fdsfdsfsd
 
 
 %% 
 [hdr, record] = edfread(sprintf('%s/%s/%s',getdatasetpath(),'KComplexes','excerpt1.edf'));
 Fs=200;
-plot(record(3,round(50.4113*200):round(50.4113*200+0.6544*200)))
+figure;plot(record(3,round(50.4113*200):round(50.4113*200+0.6544*200)))
+
+
+
 
 output=record(3,round(50.4113*200):round(50.4113*200+0.6544*200));
 output=output';
@@ -82,4 +84,62 @@ figure;imshow(eegimg);
 % sg = zscore(sg) * amplification;
 % 
 % signal = sg;
+
+
+%%
+% Parameters ==============
+epochRange = 1:30;
+channelRange=1:14;
+labelRange = [ones(1,15)+1 ones(1,15)];
+imagescale=1;siftscale=1;siftdescriptordensity=1;
+% =========================
+
+output = cell(1,30);
+
+for epoch=epochRange     % subject
+
+    label=labelRange(epoch);   % experiment
+
+    if (label == 1)
+        filename='EyesOpen';
+    else
+        filename='EyesClosed';
+    end
+    
+    if (epoch>=16)
+        subject = epoch-15;
+    else
+        subject = epoch;
+    end
+    
+    directory = sprintf('Rodrigo%s',filesep);
+    file = sprintf('eeg_%s_%i.dat',filename,subject);
+    
+    fprintf('%s%s%s\n', directory, filesep, file );
+    
+    output{epoch} = loadepoceegraw(directory,file,1); 
+
+end
+
+
+outp = output{15}(:,7:8);
+
+[eegimg, DOTS, zerolevel] = eegimage(1,outp,imagescale,timescale*2, false,minimagesize,false,false);
+figure;imshow(eegimg);
+print('samplepoints','-depsc');
+
+[eegimg, DOTS, zerolevel] = eegimage(1,outp,imagescale,timescale*2, false,minimagesize,false,true);
+figure;imshow(eegimg);
+print('bresenham','-depsc');
+
+[eegimg, DOTS, zerolevel] = eegimage(1,outp,imagescale,timescale*2*4, false,minimagesize,false,true);
+figure;imshow(eegimg);
+print('upscaled','-depsc');
+
+outp2(:,1) = resample(outp(:,1),1:size(outp,1),4,'linear');
+outp2(:,2) = resample(outp(:,2),1:size(outp,1),4,'linear');
+
+[eegimg, DOTS, zerolevel] = eegimage(1,outp2,imagescale,timescale*2, false,minimagesize,false,true);
+figure;imshow(eegimg);
+print('upsample','-depsc');
 
