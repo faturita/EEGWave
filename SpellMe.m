@@ -1,7 +1,12 @@
-function Speller = SpellMe(F,channelRange,trialRange,labelRange, trainingRange,testRange,SC)
+function Speller = SpellMe(F,channelRange,trialRange,labelRange, trainingRange,testRange,SC,invertmatrixorder)
 %
 % Returns the selected keystrokes based on binary classification selected
 % predictions (on SC(channel).predicted) on a channel-by-channel basis.
+
+if (nargin<8)
+    invertmatrixorder=false
+end
+
 
 SPELLERMATRIX = { { 'A','B','C','D','E','F'},
                 { 'G','H','I','J','K','L'},
@@ -36,7 +41,11 @@ for channel=channelRange
         if (Mx(1) == 0) Mx(1) = randi(6);end
         if (Mx(2) == 0) Mx(2) = randi(6)+6;end
         
-        Speller{channel}{end+1} = SPELLERMATRIX{Mx(1)}{Mx(2)-6};
+        if (invertmatrixorder)
+            Speller{channel}{end+1} = SPELLERMATRIX{Mx(2)-6}{Mx(1)}; 
+        else
+            Speller{channel}{end+1} = SPELLERMATRIX{Mx(1)}{Mx(2)-6};
+        end
         
         mind=mind+12;
         maxd=maxd+12;        
