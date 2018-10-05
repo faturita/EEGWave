@@ -5,3 +5,6 @@ routput.mat
 EEG.mat
 SHCC/datos.mat
 matlab.mat
+grads.txt
+image.txt
+baseimageonscale.txt

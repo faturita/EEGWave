@@ -70,16 +70,18 @@ classifier=6;
 
 artifactcheck=false;
   
-    globalappyzscore=false;
-    globalclassifier=4;
-    globalfeaturetype=5;
-    globalsignalgain=1.2;
+%     globalappyzscore=false;
+%     globalclassifier=4;
+%     globalfeaturetype=5;
+%     globalsignalgain=1.2;
     
 applyzscore=globalappyzscore;
 classifier=globalclassifier;
 featuretype=globalfeaturetype;
 randomdelay=globalrandomdelay;
 randomamplitude=globalrandomamplitude;
+distancetype=globaldistancetype;
+k=globalk;
 
 %downsize=1;timescale=1;amplitude=1;
 
@@ -113,6 +115,8 @@ sqKS = [37; 16; 13; 45; 47; 35; 31; 28;39; 33;   28;  ...
      28;...
      29;...
      39];
+ 
+ sqKS=globalks;
 
 %%
 % Build routput pasting epochs toghether...
@@ -436,7 +440,9 @@ for subject=subjectRange
                         for channel=channelRange
                             feature = rsignal{i}(:,channel);
   
-                            feature=PE(feature,1,2,10);
+                            m = globalm;
+                            ws = globalwindowsize;
+                            feature=PE(feature,1,m,ws);
                             
                             feature=feature';
                             

@@ -1,11 +1,197 @@
 %clear all
 %close all
+
+% Parameter findings.
+
 globalrepetitions=1;
 globalsignalsize=64;
 KS=10:50;
 for globaliterations=1:size(KS,2)
     %run('OfflineProcessP300.m');
 end
+%%  Finding the right KS
+globalrepts1=[];
+globalchannel1=[];
+globalrepts2=[];
+globalchannel2=[];
+globalrepts3=[];
+globalchannel3=[];
+globalsignalgain=2.2;
+globalrandomdelay=false;
+globalrandomamplitude=false;
+globalrepetitions=10;
+
+for globalks=15:40
+    % SIFT
+    globaldistancetype='euclidean';
+    globalk=7;
+    globalappyzscore=false;
+    globalclassifier=6;
+    globalfeaturetype=3;
+    run('ERPProcess.m')
+    globalrepts1 = [globalrepts1 totals(:,6)];
+    globalchannel1 = totals(:,5);
+end
+
+
+figure;
+set(0, 'DefaultAxesFontSize',15);
+subplot(1,1,1);plot(globalrepts1,'LineWidth',2);title('zscore');axis([0 15 0 1.05]);grid on;
+axis([0 15 0 1.05]);
+%ylabel('Performance')
+%set(hx,'fontSize',40);
+%set(hy,'fontSize',40);
+set(gcf, 'Position', [1, 1, 730, 329])
+fdfsfs
+
+%% Checking distance function
+globalrepts1=[];
+globalchannel1=[];
+globalrepts2=[];
+globalchannel2=[];
+globalrepts3=[];
+globalchannel3=[];
+globalsignalgain=2.2;
+globalrandomdelay=false;
+globalrandomamplitude=false;
+for globalrepetitions=1:10
+    % SIFT
+    globaldistancetype='euclidean';
+    globalk=7;
+    globalappyzscore=true;
+    globalclassifier=6;
+    globalfeaturetype=1;
+    run('ERPProcess.m')
+    globalrepts1 = [globalrepts1 totals(:,6)];
+    globalchannel1 = totals(:,5);
+end
+
+for globalrepetitions=1:10
+    % SIFT
+    globaldistancetype='euclidean';
+    globalk=7;
+    globalappyzscore=false;
+    globalclassifier=6;
+    globalfeaturetype=3;
+    run('ERPProcess.m')
+    globalrepts2 = [globalrepts2 totals(:,6)];
+    globalchannel2 = totals(:,5);
+end
+
+
+figure;
+set(0, 'DefaultAxesFontSize',15);
+subplot(1,3,1);plot(globalrepts1,'LineWidth',2);title('zscore');axis([0 10 0 1.05]);grid on;
+subplot(1,3,2);plot(globalrepts2,'LineWidth',2);title('autoscale');axis([0 10 0 1.05]);grid on;
+axis([0 10 0 1.05]);
+%ylabel('Performance')
+%set(hx,'fontSize',40);
+%set(hy,'fontSize',40);
+set(gcf, 'Position', [1, 1, 730, 329])
+
+gggg
+%% Checking distance function
+globalrepts3=[];
+globalchannel3=[];
+globalsignalgain=2.2;
+globalrandomdelay=false;
+globalrandomamplitude=false;
+for globalrepetitions=1:10
+    % SIFT
+    globaldistancetype='euclidean';
+    globalk=7;
+    globalappyzscore=true;
+    globalclassifier=6;
+    globalfeaturetype=1;
+    run('ERPProcess.m')
+    globalrepts1 = [globalrepts1 totals(:,6)];
+    globalchannel1 = totals(:,5);
+end
+
+for globalrepetitions=1:10
+    % SIFT
+    globaldistancetype='euclidean';
+    globalk=3;
+    globalappyzscore=true;
+    globalclassifier=6;
+    globalfeaturetype=1;
+    run('ERPProcess.m')
+    globalrepts2 = [globalrepts2 totals(:,6)];
+    globalchannel2 = totals(:,5);
+end
+
+for globalrepetitions=1:10
+    % SIFT
+    globaldistancetype='euclidean';
+    globalk=1;
+    globalappyzscore=true;
+    globalclassifier=6;
+    globalfeaturetype=1;
+    run('ERPProcess.m')
+    globalrepts3 = [globalrepts3 totals(:,6)];
+    globalchannel3 = totals(:,5);
+end
+
+figure;
+set(0, 'DefaultAxesFontSize',15);
+subplot(1,3,1);plot(globalrepts1,'LineWidth',2);title('k=7');axis([0 10 0 1.05]);grid on;
+subplot(1,3,2);plot(globalrepts2,'LineWidth',2);title('k=3');axis([0 10 0 1.05]);grid on;
+subplot(1,3,3);plot(globalrepts3,'LineWidth',2);title('k=1');axis([0 10 0 1.05]);grid on;
+axis([0 10 0 1.05]);
+%ylabel('Performance')
+%set(hx,'fontSize',40);
+%set(hy,'fontSize',40);
+set(gcf, 'Position', [1, 1, 730, 329])
+fdsfs
+
+%% Finding parameters for PE
+globalperformances6=[];
+globalsignalgain=2.2;
+globalrepetitions=10;
+globalrandomdelay=false;
+globalrandomamplitude=false;
+globalrepts1=[];
+globalrepts2=[];
+globalrepts3=[];
+globalrepts4=[];
+globalrepts5=[];
+globalrepts6=[];
+globalrepts7=[];
+globalrepts8=[];
+globalrepts9=[];
+globalrepts10=[];
+globalparams6=[];
+for globalm=2:8
+    for globalwindowsize=globalm:5:globalsignalsize-globalm
+    % PE  m=2, windowsize=12 achives better performance.
+    globalappyzscore=false;
+    globalclassifier=6;
+    globalfeaturetype=6;
+    run('ERPProcess.m')
+    globalperformances6 = [globalperformances6 totals(:,6)];
+    
+    globalparams6 = [globalparams6 globalwindowsize];
+    globalrepts6 = [globalrepts6 totals(:,6)];  
+    globalchannel6 = totals(:,5);
+    end
+end
+
+
+for globalm=2:8
+    for globalwindowsize=globalm:5:globalsignalsize-globalm
+    % PE  m=2, windowsize=12 achives better performance.
+    globalappyzscore=false;
+    globalclassifier=6;
+    globalfeaturetype=6;
+    run('ERPProcess.m')
+    globalperformances6 = [globalperformances6 totals(:,6)];
+    
+    globalparams6 = [globalparams6 globalwindowsize];
+    globalrepts6 = [globalrepts6 totals(:,6)];  
+    globalchannel6 = totals(:,5);
+    end
+end
+
 
 globalperformances1=[];
 for globalsignalgain=0:40
