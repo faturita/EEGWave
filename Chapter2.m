@@ -26,23 +26,24 @@ minimagesize=1;
 
 %%
 output = zeros(size(output));
-
 output(125,8) = 50;
+output = zeros(20,8);
+output(10,8) = 50;
+
  
 [eegimg, DOTS, zerolevel] = eegimage(8,output,imagescale,timescale, false,minimagesize);
 figure;imshow(eegimg);
-
-
-
-%%
+CropFigure(5);
+print('standardized','-depsc');
 % Check the influence of the scale of the image on the descriptors
 %[eegimg, DOTS, zerolevel] = eegimage(8,output,imagescale*8,timescale*2, false,minimagesize);
 
 
 [eegimg, DOTS, zerolevel, height] = eegimageinvariant(8,output,imagescale,timescale, false,minimagesize);
 figure;imshow(eegimg);
-  
-
+CropFigure(5);
+print('autoscaled','-depsc');
+fdsfds
 %%
 output = extract(data.X, ...
     (ceil(time1/downsize)), ...
@@ -51,6 +52,30 @@ output = extract(data.X, ...
 [eegimg, DOTS, zerolevel] = eegimage(8,output,imagescale,timescale, false,minimagesize);
 figure;imshow(eegimg);
 imwrite(eegimg,'plottingsample.png');
+
+
+%%
+% Genera los plots autoescalados y estandarizados del capitulo 3.
+time1=data.flash(678,1)/Fs;
+
+output = extract(data.X, ...
+    (ceil(time1/downsize)), ...
+    floor(Fs/downsize)*windowsize);
+
+
+[eegimg, DOTS, zerolevel] = eegimage(8,output,imagescale,timescale, false,minimagesize);
+figure;imshow(eegimg);
+CropFigure(3);
+print('sampleplot','-depsc');
+
+
+figure;plot(output(:,8));
+set(0, 'DefaultAxesFontSize',15);
+hy = ylabel('Voltage [microV]');
+hx = xlabel('Digital Time');
+set(hx,'fontSize',20);
+set(hy,'fontSize',20);
+print('plotvsimage','-depsc');
 fdsfdsfsd
 
 
@@ -93,7 +118,7 @@ channelRange=1:14;
 labelRange = [ones(1,15)+1 ones(1,15)];
 imagescale=1;siftscale=1;siftdescriptordensity=1;
 % =========================
-
+Fs=128;
 output = cell(1,30);
 
 for epoch=epochRange     % subject
@@ -142,4 +167,23 @@ outp2(:,2) = resample(outp(:,2),1:size(outp,1),4,'linear');
 [eegimg, DOTS, zerolevel] = eegimage(1,outp2,imagescale,timescale*2, false,minimagesize,false,true);
 figure;imshow(eegimg);
 print('upsample','-depsc');
+
+
+
+
+
+
+%%
+
+%5,8 bien 10 , 12
+output1 = loadepoceegraw('Subjects','eeg_EyesClosed_5.dat',1);
+output1=output1(1:1280,:);
+
+output2 = loadepoceegraw('Subjects','eeg_EyesOpen_5.dat',1);
+output2=output2(1:1280,:);
+
+figure;drawfft(output1(:,7)',true,Fs,true);axis([2 60 -0.2 4]);title('Relaxed, eyes closed, 10s');
+print('eyesclosed','-depsc');
+figure;drawfft(output2(:,7)',true,Fs,true);axis([2 60 -0.2 4]);title('Relaxed, eyes open, 10s');
+print('eyesopen','-depsc');
 
