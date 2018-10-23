@@ -42,7 +42,7 @@ subjectRange=[1 3 4 6 7 9 10 11 13 14 16 17 18 19 20 21 22 23];
 %2,15, 8 high impeadance empty trials.
 subjectRange=[1 11 14   16 17 20 22 23];
 %subjectRange=22;
-subjectRange=21;
+subjectRange=globalsubjectrange;
 epochRange = 1:120*7*5;
 channelRange=1:8;
 labelRange = [];
@@ -70,12 +70,12 @@ classifier=6;
 
 artifactcheck=false;
   
-%     globalappyzscore=false;
+%     globalapplyzscore=false;
 %     globalclassifier=4;
 %     globalfeaturetype=5;
 %     globalsignalgain=1.2;
     
-applyzscore=globalappyzscore;
+applyzscore=globalapplyzscore;
 classifier=globalclassifier;
 featuretype=globalfeaturetype;
 randomdelay=globalrandomdelay;
@@ -88,7 +88,7 @@ k=globalk;
 % =====================================
 
 % EEG(subject,trial,flash)
-EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,0,randomdelay,randomamplitude);
+EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,true,0,randomdelay,randomamplitude);
 
 % CONTROL
 %EEG = randomizeEEG(EEG);
@@ -380,7 +380,7 @@ for subject=subjectRange
                         
                         for channel=channelRange
                             feature = rsignal{i}(:,channel);
-                            feature = (1/norm(feature))*feature;
+                            %feature = (1/norm(feature))*feature;
                             
                             F(channel,label,epoch).hit = hit{subject}{trial}{classes}{i};
                             F(channel,label,epoch).descriptors = feature;

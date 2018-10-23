@@ -40,9 +40,6 @@ Fs=250;
 flashespertrial=120;
 downsize=1;
 
-subject=21;
-subjectRange=subject;
-
 windowsize=1;
 
 fullrange=1:250;
