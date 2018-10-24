@@ -19,7 +19,7 @@ globalk=7;
 globalsignalgain=2.2;
 globalsignalsize=64;
 globalsubjectrange=[21,24,25,26];
-%globalsubjectrange=[3,4,6,7];
+globalsubjectrange=[3,4,6,7];
 globalks= [37; -1;...
      16;    13;  -1;  45;    47; -1; 35; 31; 28;...
      -1; 39;    35;...
@@ -29,8 +29,8 @@ globalks= [37; -1;...
      28;...
      29;...
      39; 28; 28; 28];
-%run('ERPProcess.m')
-
+run('ERPProcess.m')
+fdsfds
 for globalrepetitions=1:10
     
     % MP1
