@@ -1,5 +1,5 @@
 % EEG(subject,trial,flash)
-function [EEG, labelRange, stimRange] = prepareEEG(Fs, windowsize, downsize, flashespertrial, subjectRange,channelRange,amplitude,bandpass,delaylag,randomdelay,randomamplitude)
+function [EEG, labelRange, stimRange] = prepareEEG(Fs, windowsize, downsize, flashespertrial, subjectRange,channelRange,amplitude,bandpass,drugsignal,delaylag,randomdelay,randomamplitude)
 
 artifactcount = 0;   
 
@@ -12,8 +12,13 @@ for subject=subjectRange
     clear data.trial
 
     load(sprintf('./signals/p300-subject-%02d.mat', subject));
-data = DrugSignal(data,amplitude,delaylag,randomdelay,randomamplitude);
+
+    if (drugsignal)
+        data = DrugSignal(data,amplitude,delaylag,randomdelay,randomamplitude);
+    end
+    
     dataX = data.X;
+
  dataX = notchsignal(data.X, channelRange,Fs);
     datatrial = data.trial;
 time1=275222.343262227;

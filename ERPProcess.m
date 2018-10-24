@@ -42,7 +42,7 @@ subjectRange=[1 3 4 6 7 9 10 11 13 14 16 17 18 19 20 21 22 23];
 %2,15, 8 high impeadance empty trials.
 subjectRange=[1 11 14   16 17 20 22 23];
 %subjectRange=22;
-subjectRange=21;
+subjectRange=globalsubjectrange;
 epochRange = 1:120*7*5;
 channelRange=1:8;
 labelRange = [];
@@ -70,23 +70,25 @@ classifier=6;
 
 artifactcheck=false;
   
-    globalappyzscore=false;
-    globalclassifier=4;
-    globalfeaturetype=5;
-    globalsignalgain=1.2;
+%     globalapplyzscore=false;
+%     globalclassifier=4;
+%     globalfeaturetype=5;
+%     globalsignalgain=1.2;
     
-applyzscore=globalappyzscore;
+applyzscore=globalapplyzscore;
 classifier=globalclassifier;
 featuretype=globalfeaturetype;
 randomdelay=globalrandomdelay;
 randomamplitude=globalrandomamplitude;
+distancetype=globaldistancetype;
+k=globalk;
 
 %downsize=1;timescale=1;amplitude=1;
 
 % =====================================
 
 % EEG(subject,trial,flash)
-EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,0,randomdelay,randomamplitude);
+EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,false,0,randomdelay,randomamplitude);
 
 % CONTROL
 %EEG = randomizeEEG(EEG);
@@ -113,6 +115,8 @@ sqKS = [37; 16; 13; 45; 47; 35; 31; 28;39; 33;   28;  ...
      28;...
      29;...
      39];
+ 
+ sqKS=globalks;
 
 %%
 % Build routput pasting epochs toghether...
@@ -376,7 +380,7 @@ for subject=subjectRange
                         
                         for channel=channelRange
                             feature = rsignal{i}(:,channel);
-                            feature = (1/norm(feature))*feature;
+                            %feature = (1/norm(feature))*feature;
                             
                             F(channel,label,epoch).hit = hit{subject}{trial}{classes}{i};
                             F(channel,label,epoch).descriptors = feature;
@@ -436,7 +440,9 @@ for subject=subjectRange
                         for channel=channelRange
                             feature = rsignal{i}(:,channel);
   
-                            feature=PE(feature,1,2,10);
+                            m = globalm;
+                            ws = globalwindowsize;
+                            feature=PE(feature,1,m,ws);
                             
                             feature=feature';
                             
