@@ -30,23 +30,31 @@ globalks= [37; -1;...
      29;...
      39; 28; 28; 28];
 %run('ERPProcess.m')
-
+    clear globalspellerrep
 for globalrepetitions=1:10
     
     % MP1
+
     globalappyzscore=false;
     globalclassifier=6;
     globalfeaturetype=5;
     run('ERPProcess.m')
     globalrepts1=globalspellerrep;
     
+end
+    clear globalspellerrep
+for globalrepetitions=1:10
+    
     % MP 2
+
     globalappyzscore=false;
     globalclassifier=11;
     globalfeaturetype=4;
     run('ERPProcess.m')
     globalrepts2 = globalspellerrep;
-    
+end
+    clear globalspellerrep
+for globalrepetitions=1:10    
     % SIFT
     globalappyzscore=true;
     globalclassifier=6;
@@ -55,7 +63,9 @@ for globalrepetitions=1:10
     run('ERPProcess.m')
     globaldistancetype='euclidean';
     globalrepts3 = globalspellerrep;
-    
+end
+    clear globalspellerrep
+for globalrepetitions=1:10    
     % PE
     globalappyzscore=false;
     globalclassifier=6;
@@ -63,15 +73,20 @@ for globalrepetitions=1:10
     globalm=2;globalwindowsize=10;
     run('ERPProcess.m')
     globalrepts6 = globalspellerrep;
-    
+end
+    clear globalspellerrep
+for globalrepetitions=1:10    
     % SHCC
     globalappyzscore=false;
     globalclassifier=6;
     globalfeaturetype=7;
     run('ERPProcess.m')
     globalrepts7 = globalspellerrep;
-    
+end
+clear globalspellerrep
+for globalrepetitions=1:10   
     % SVM 
+
     globalappyzscore=false;
     globalclassifier=4;
     globalfeaturetype=4;
@@ -96,3 +111,33 @@ axis([0 10 0 1.05]);
 %set(hx,'fontSize',40);
 %set(hy,'fontSize',40);
 set(gcf, 'Position', [1, 1, 730, 329])
+
+C(1,:)=[1 0 1];
+C(2,:)=[1 0 0];
+C(3,:)=[0 0.5 0];
+C(4,:)=[0 0 1];
+C(5,:)=[0.5 0.5 0.5];
+C(6,:)=[0.5 0 0.5];
+C(7,:)=[0 0.75 0.2];
+C(8,:)=[0.65 0.30 0];
+
+
+mark=cell(8,1);
+mark{1}='o';
+mark{2}='s';
+mark{3}='^';
+mark{4}='v';
+mark{5}='>';
+mark{6}='<';
+mark{7}='p';
+mark{8}='d';
+
+linestyle={'-','--',':','-.',':','--','-','-.'};
+
+hold on
+h = zeros(8, 1);
+for channel=channelRange
+    h(channel) = plot(NaN,NaN,'LineWidth',2,'MarkerSize',1,'color',C(channel,:),...
+    'linestyle',linestyle{channel},'marker',mark{channel});
+end
+legend(h, channels);
