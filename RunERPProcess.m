@@ -1,3 +1,6 @@
+clear all
+close all
+
 globalrepts1=[];
 globalrepts2=[];
 globalrepts3=[];
@@ -5,16 +8,18 @@ globalrepts6=[];
 globalrepts7=[];
 globalrepts4=[];
 
-
+globalclassifier=Classifiers.nn;
+globalfeaturetype=Features.multichannel;
 globalrepetitions=10;
-globalapplyzscore=true;
+globalapplyzscore=false;
 globalrandomdelay=false;
 globalrandomamplitude=false;
 globaldistancetype='euclidean';
 globalk=7;
 globalsignalgain=2.2;
 globalsignalsize=64;
-globalsubjectrange=[21,24,25];
+globalsubjectrange=[21,24,25,26];
+%globalsubjectrange=[3,4,6,7];
 globalks= [37; -1;...
      16;    13;  -1;  45;    47; -1; 35; 31; 28;...
      -1; 39;    35;...
@@ -79,12 +84,12 @@ end
 figure;
 set(0, 'DefaultAxesFontSize',15);
 for subject=subjectRange
-    subplot(3,6,(find(subjectRange==subject)-1)*6+1);PlotOneSubjectOneMethod(channels,subject,globalrepts1);if ((find(subjectRange==subject)-1)==0) title('MP 1');end;axis([0 10 0 1.05]);if (subject ~= 25) set(gca, 'XTickLabel', []);end;
-    subplot(3,6,(find(subjectRange==subject)-1)*6+2);PlotOneSubjectOneMethod(channels,subject,globalrepts2);if ((find(subjectRange==subject)-1)==0) title('MP 2');end;set(gca, 'YTickLabel', []);if (subject ~= 25) set(gca, 'XTickLabel', []);end;
-    subplot(3,6,(find(subjectRange==subject)-1)*6+3);PlotOneSubjectOneMethod(channels,subject,globalrepts3);if ((find(subjectRange==subject)-1)==0) title('SIFT');end;set(gca, 'YTickLabel', []);if (subject ~= 25) set(gca, 'XTickLabel', []);end;
-    subplot(3,6,(find(subjectRange==subject)-1)*6+4);PlotOneSubjectOneMethod(channels,subject,globalrepts6);if ((find(subjectRange==subject)-1)==0) title('PE');end;set(gca, 'YTickLabel', []);if (subject ~= 25) set(gca, 'XTickLabel', []);end;
-    subplot(3,6,(find(subjectRange==subject)-1)*6+5);PlotOneSubjectOneMethod(channels,subject,globalrepts7);if ((find(subjectRange==subject)-1)==0) title('SHCC');end;set(gca, 'YTickLabel', []);if (subject ~= 25) set(gca, 'XTickLabel', []);end;
-    subplot(3,6,(find(subjectRange==subject)-1)*6+6);PlotOneSubjectOneMethod(channels,subject,globalrepts4);if ((find(subjectRange==subject)-1)==0) title('SVM');end;set(gca, 'YTickLabel', []);if (subject ~= 25) set(gca, 'XTickLabel', []);end;
+    subplot(4,6,(find(subjectRange==subject)-1)*6+1);PlotOneSubjectOneMethod(channels,subject,globalrepts1);if ((find(subjectRange==subject)-1)==0) title('MP 1');end;axis([0 10 0 1.05]);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
+    subplot(4,6,(find(subjectRange==subject)-1)*6+2);PlotOneSubjectOneMethod(channels,subject,globalrepts2);if ((find(subjectRange==subject)-1)==0) title('MP 2');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
+    subplot(4,6,(find(subjectRange==subject)-1)*6+3);PlotOneSubjectOneMethod(channels,subject,globalrepts3);if ((find(subjectRange==subject)-1)==0) title('SIFT');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
+    subplot(4,6,(find(subjectRange==subject)-1)*6+4);PlotOneSubjectOneMethod(channels,subject,globalrepts6);if ((find(subjectRange==subject)-1)==0) title('PE');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
+    subplot(4,6,(find(subjectRange==subject)-1)*6+5);PlotOneSubjectOneMethod(channels,subject,globalrepts7);if ((find(subjectRange==subject)-1)==0) title('SHCC');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
+    subplot(4,6,(find(subjectRange==subject)-1)*6+6);PlotOneSubjectOneMethod(channels,subject,globalrepts4);if ((find(subjectRange==subject)-1)==0) title('SVM');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
 end
 axis([0 10 0 1.05]);
 %ylabel('Performance')
