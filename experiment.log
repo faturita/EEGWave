@@ -1714,6 +1714,7 @@ st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
 26     & Oz&  90 $\pm$  10 \\
 Experiment:  K = 7  
 st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+<<<<<<< HEAD
 3     & Oz&  87 $\pm$  65 \\
 4     & PO7&  86 $\pm$  25 \\
 6     & PO8&  89 $\pm$  70 \\
@@ -1730,3 +1731,1794 @@ st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
 4     & Cz&  86 $\pm$   5 \\
 6     & Fz&  89 $\pm$   0 \\
 7     & Cz&  89 $\pm$  10 \\
+=======
+21     & Pz&  90 $\pm$ 100 \\
+24     & PO7&  90 $\pm$ 100 \\
+25     & Fz&  90 $\pm$  95 \\
+26     & Fz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Oz&  90 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  45 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  35 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Pz&  90 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  35 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  45 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Pz&  90 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P4&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  70 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  70 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  70 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  70 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P4&  90 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  70 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  25 \\
+24     & PO7&  90 $\pm$  25 \\
+25     & PO7&  90 $\pm$  20 \\
+26     & PO8&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  40 \\
+24     & PO8&  90 $\pm$  40 \\
+25     & Cz&  90 $\pm$  60 \\
+26     & Cz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  35 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & Fz&  90 $\pm$  60 \\
+26     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  55 \\
+24     & PO8&  90 $\pm$  55 \\
+25     & PO8&  90 $\pm$  70 \\
+26     & PO8&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  60 \\
+24     & PO8&  90 $\pm$  65 \\
+25     & P4&  90 $\pm$  65 \\
+26     & Oz&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  60 \\
+24     & Oz&  90 $\pm$  70 \\
+25     & PO8&  90 $\pm$  75 \\
+26     & PO8&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  75 \\
+24     & PO8&  90 $\pm$  75 \\
+25     & PO8&  90 $\pm$  90 \\
+26     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  70 \\
+24     & PO8&  90 $\pm$  80 \\
+25     & PO7&  90 $\pm$  85 \\
+26     & PO8&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  85 \\
+24     & Oz&  90 $\pm$  85 \\
+25     & PO8&  90 $\pm$  95 \\
+26     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  70 \\
+24     & PO7&  90 $\pm$  85 \\
+25     & PO7&  90 $\pm$  90 \\
+26     & PO8&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  10 \\
+24     & Fz&  90 $\pm$  15 \\
+25     & P3&  90 $\pm$  10 \\
+26     & PO7&  90 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  10 \\
+24     & PO8&  90 $\pm$  20 \\
+25     & Pz&  90 $\pm$  10 \\
+26     & PO8&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Pz&  90 $\pm$  15 \\
+24     & PO7&  90 $\pm$  20 \\
+25     & P4&  90 $\pm$  10 \\
+26     & Cz&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  25 \\
+24     & Cz&  90 $\pm$  20 \\
+25     & Cz&  90 $\pm$  20 \\
+26     & PO8&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  25 \\
+24     & P3&  90 $\pm$  25 \\
+25     & Oz&  90 $\pm$  35 \\
+26     & PO7&  90 $\pm$  35 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  15 \\
+24     & PO7&  90 $\pm$  20 \\
+25     & PO7&  90 $\pm$  35 \\
+26     & PO7&  90 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  20 \\
+24     & Oz&  90 $\pm$  40 \\
+25     & Fz&  90 $\pm$  30 \\
+26     & PO8&  90 $\pm$  35 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  25 \\
+24     & PO7&  90 $\pm$  25 \\
+25     & PO8&  90 $\pm$  55 \\
+26     & Cz&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P4&  90 $\pm$  15 \\
+24     & PO7&  90 $\pm$  35 \\
+25     & PO8&  90 $\pm$  60 \\
+26     & PO7&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  30 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & PO8&  90 $\pm$  65 \\
+26     & PO7&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO7&  90 $\pm$  10 \\
+24     & PO8&  90 $\pm$  20 \\
+25     & PO8&  90 $\pm$  30 \\
+26     & PO8&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & Cz&  90 $\pm$  15 \\
+24     & Oz&  90 $\pm$  40 \\
+25     & PO8&  90 $\pm$  45 \\
+26     & PO8&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  30 \\
+24     & PO8&  90 $\pm$  35 \\
+25     & PO8&  90 $\pm$  55 \\
+26     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  45 \\
+24     & PO8&  90 $\pm$  50 \\
+25     & PO8&  90 $\pm$  65 \\
+26     & Oz&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  50 \\
+24     & Oz&  90 $\pm$  70 \\
+25     & PO8&  90 $\pm$  80 \\
+26     & PO8&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  65 \\
+24     & PO8&  90 $\pm$  65 \\
+25     & PO8&  90 $\pm$  80 \\
+26     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  60 \\
+24     & PO8&  90 $\pm$  90 \\
+25     & PO8&  90 $\pm$  90 \\
+26     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  70 \\
+24     & PO8&  90 $\pm$  95 \\
+25     & PO8&  90 $\pm$  95 \\
+26     & PO8&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  90 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO8&  90 $\pm$  95 \\
+26     & PO8&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  85 \\
+24     & PO8&  90 $\pm$  95 \\
+25     & PO8&  90 $\pm$  95 \\
+26     & Oz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  20 \\
+24     & Cz&  90 $\pm$  10 \\
+25     & PO8&  90 $\pm$  20 \\
+26     & Fz&  90 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  25 \\
+24     & Cz&  90 $\pm$  15 \\
+25     & PO8&  90 $\pm$  40 \\
+26     & PO8&  90 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  35 \\
+24     & Oz&  90 $\pm$  30 \\
+25     & PO7&  90 $\pm$  50 \\
+26     & Oz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  40 \\
+24     & P3&  90 $\pm$  40 \\
+25     & Cz&  90 $\pm$  60 \\
+26     & PO8&  90 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  40 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & PO8&  90 $\pm$  70 \\
+26     & PO7&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  55 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & PO8&  90 $\pm$  70 \\
+26     & Cz&  90 $\pm$  70 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  55 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & PO7&  90 $\pm$  65 \\
+26     & PO7&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  65 \\
+24     & Oz&  90 $\pm$  55 \\
+25     & Oz&  90 $\pm$  80 \\
+26     & Cz&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  65 \\
+24     & Cz&  90 $\pm$  65 \\
+25     & PO8&  90 $\pm$  80 \\
+26     & PO7&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  55 \\
+24     & Oz&  90 $\pm$  45 \\
+25     & Oz&  90 $\pm$  85 \\
+26     & PO7&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  10 \\
+24     & Oz&  90 $\pm$  30 \\
+25     & PO8&  90 $\pm$  45 \\
+26     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  50 \\
+24     & PO7&  90 $\pm$  55 \\
+25     & Fz&  90 $\pm$  75 \\
+26     & PO7&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  60 \\
+24     & PO8&  90 $\pm$  80 \\
+25     & Cz&  90 $\pm$  80 \\
+26     & PO7&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  75 \\
+24     & PO8&  90 $\pm$  90 \\
+25     & Fz&  90 $\pm$  85 \\
+26     & PO8&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  80 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  85 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$ 100 \\
+24     & PO7&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$ 100 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  95 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P4&  90 $\pm$ 100 \\
+24     & P3&  90 $\pm$ 100 \\
+25     & Cz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P4&  90 $\pm$   5 \\
+24     & Fz&  90 $\pm$  15 \\
+25     & P4&  90 $\pm$  10 \\
+26     & PO8&  90 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  45 \\
+24     & P4&  90 $\pm$  20 \\
+25     & PO8&  90 $\pm$  70 \\
+26     & PO7&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  60 \\
+24     & PO8&  90 $\pm$  40 \\
+25     & PO8&  90 $\pm$  80 \\
+26     & PO7&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  65 \\
+24     & PO7&  90 $\pm$  65 \\
+25     & Fz&  90 $\pm$  90 \\
+26     & PO7&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  75 \\
+24     & PO7&  90 $\pm$  80 \\
+25     & Cz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  75 \\
+24     & PO7&  90 $\pm$  90 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & PO7&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  80 \\
+24     & PO7&  90 $\pm$  85 \\
+25     & P3&  90 $\pm$ 100 \\
+26     & PO7&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$ 100 \\
+24     & PO7&  90 $\pm$ 100 \\
+25     & Cz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  90 \\
+24     & P3&  90 $\pm$ 100 \\
+25     & Cz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  95 \\
+24     & P3&  90 $\pm$ 100 \\
+25     & Fz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  25 \\
+24     & PO7&  90 $\pm$  25 \\
+25     & PO7&  90 $\pm$  20 \\
+26     & PO8&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  40 \\
+24     & PO8&  90 $\pm$  40 \\
+25     & Cz&  90 $\pm$  60 \\
+26     & Cz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  35 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & Fz&  90 $\pm$  60 \\
+26     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  55 \\
+24     & PO8&  90 $\pm$  55 \\
+25     & PO8&  90 $\pm$  70 \\
+26     & PO8&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  60 \\
+24     & PO8&  90 $\pm$  65 \\
+25     & P4&  90 $\pm$  65 \\
+26     & Oz&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  60 \\
+24     & Oz&  90 $\pm$  70 \\
+25     & PO8&  90 $\pm$  75 \\
+26     & PO8&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  75 \\
+24     & PO8&  90 $\pm$  75 \\
+25     & PO8&  90 $\pm$  90 \\
+26     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  70 \\
+24     & PO8&  90 $\pm$  80 \\
+25     & PO7&  90 $\pm$  85 \\
+26     & PO8&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  85 \\
+24     & Oz&  90 $\pm$  85 \\
+25     & PO8&  90 $\pm$  95 \\
+26     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  70 \\
+24     & PO7&  90 $\pm$  85 \\
+25     & PO7&  90 $\pm$  90 \\
+26     & PO8&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  10 \\
+24     & Fz&  90 $\pm$  15 \\
+25     & P3&  90 $\pm$  10 \\
+26     & PO7&  90 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  10 \\
+24     & PO8&  90 $\pm$  20 \\
+25     & Pz&  90 $\pm$  10 \\
+26     & PO8&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Pz&  90 $\pm$  15 \\
+24     & PO7&  90 $\pm$  20 \\
+25     & P4&  90 $\pm$  10 \\
+26     & Cz&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P3&  90 $\pm$  25 \\
+24     & Cz&  90 $\pm$  20 \\
+25     & Cz&  90 $\pm$  20 \\
+26     & PO8&  90 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  25 \\
+24     & P3&  90 $\pm$  25 \\
+25     & Oz&  90 $\pm$  35 \\
+26     & PO7&  90 $\pm$  35 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  15 \\
+24     & PO7&  90 $\pm$  20 \\
+25     & PO7&  90 $\pm$  35 \\
+26     & PO7&  90 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  20 \\
+24     & Oz&  90 $\pm$  40 \\
+25     & Fz&  90 $\pm$  30 \\
+26     & PO8&  90 $\pm$  35 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  25 \\
+24     & PO7&  90 $\pm$  25 \\
+25     & PO8&  90 $\pm$  55 \\
+26     & Cz&  90 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P4&  90 $\pm$  15 \\
+24     & PO7&  90 $\pm$  35 \\
+25     & PO8&  90 $\pm$  60 \\
+26     & PO7&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  30 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & PO8&  90 $\pm$  65 \\
+26     & PO7&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO7&  90 $\pm$  10 \\
+24     & PO8&  90 $\pm$  20 \\
+25     & PO8&  90 $\pm$  30 \\
+26     & PO8&  90 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & Cz&  90 $\pm$  15 \\
+24     & Oz&  90 $\pm$  40 \\
+25     & PO8&  90 $\pm$  45 \\
+26     & PO8&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  30 \\
+24     & PO8&  90 $\pm$  35 \\
+25     & PO8&  90 $\pm$  55 \\
+26     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  45 \\
+24     & PO8&  90 $\pm$  50 \\
+25     & PO8&  90 $\pm$  65 \\
+26     & Oz&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  50 \\
+24     & Oz&  90 $\pm$  70 \\
+25     & PO8&  90 $\pm$  80 \\
+26     & PO8&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  65 \\
+24     & PO8&  90 $\pm$  65 \\
+25     & PO8&  90 $\pm$  80 \\
+26     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  60 \\
+24     & PO8&  90 $\pm$  90 \\
+25     & PO8&  90 $\pm$  90 \\
+26     & PO8&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  70 \\
+24     & PO8&  90 $\pm$  95 \\
+25     & PO8&  90 $\pm$  95 \\
+26     & PO8&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  90 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO8&  90 $\pm$  95 \\
+26     & PO8&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 28
+21     & PO8&  90 $\pm$  85 \\
+24     & PO8&  90 $\pm$  95 \\
+25     & PO8&  90 $\pm$  95 \\
+26     & Oz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  20 \\
+24     & Cz&  90 $\pm$  10 \\
+25     & PO8&  90 $\pm$  20 \\
+26     & Fz&  90 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  25 \\
+24     & Cz&  90 $\pm$  15 \\
+25     & PO8&  90 $\pm$  40 \\
+26     & PO8&  90 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  35 \\
+24     & Oz&  90 $\pm$  30 \\
+25     & PO7&  90 $\pm$  50 \\
+26     & Oz&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  40 \\
+24     & P3&  90 $\pm$  40 \\
+25     & Cz&  90 $\pm$  60 \\
+26     & PO8&  90 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  40 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & PO8&  90 $\pm$  70 \\
+26     & PO7&  90 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  55 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & PO8&  90 $\pm$  70 \\
+26     & Cz&  90 $\pm$  70 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  55 \\
+24     & PO8&  90 $\pm$  45 \\
+25     & PO7&  90 $\pm$  65 \\
+26     & PO7&  90 $\pm$  75 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  65 \\
+24     & Oz&  90 $\pm$  55 \\
+25     & Oz&  90 $\pm$  80 \\
+26     & Cz&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$  65 \\
+24     & Cz&  90 $\pm$  65 \\
+25     & PO8&  90 $\pm$  80 \\
+26     & PO7&  90 $\pm$  90 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  55 \\
+24     & Oz&  90 $\pm$  45 \\
+25     & Oz&  90 $\pm$  85 \\
+26     & PO7&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  10 \\
+24     & Oz&  90 $\pm$  30 \\
+25     & PO8&  90 $\pm$  45 \\
+26     & PO8&  90 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  50 \\
+24     & PO7&  90 $\pm$  55 \\
+25     & Fz&  90 $\pm$  75 \\
+26     & PO7&  90 $\pm$  85 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  60 \\
+24     & PO8&  90 $\pm$  80 \\
+25     & Cz&  90 $\pm$  80 \\
+26     & PO7&  90 $\pm$  95 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  75 \\
+24     & PO8&  90 $\pm$  90 \\
+25     & Fz&  90 $\pm$  85 \\
+26     & PO8&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  80 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  85 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$ 100 \\
+24     & PO7&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO8&  90 $\pm$ 100 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  95 \\
+24     & PO8&  90 $\pm$ 100 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & P3&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P4&  90 $\pm$ 100 \\
+24     & P3&  90 $\pm$ 100 \\
+25     & Cz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & P4&  90 $\pm$   5 \\
+24     & Fz&  90 $\pm$  15 \\
+25     & P4&  90 $\pm$  10 \\
+26     & PO8&  90 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  45 \\
+24     & P4&  90 $\pm$  20 \\
+25     & PO8&  90 $\pm$  70 \\
+26     & PO7&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  60 \\
+24     & PO8&  90 $\pm$  40 \\
+25     & PO8&  90 $\pm$  80 \\
+26     & PO7&  90 $\pm$  80 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Fz&  90 $\pm$  65 \\
+24     & PO7&  90 $\pm$  65 \\
+25     & Fz&  90 $\pm$  90 \\
+26     & PO7&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  75 \\
+24     & PO7&  90 $\pm$  80 \\
+25     & Cz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  75 \\
+24     & PO7&  90 $\pm$  90 \\
+25     & PO7&  90 $\pm$ 100 \\
+26     & PO7&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  80 \\
+24     & PO7&  90 $\pm$  85 \\
+25     & P3&  90 $\pm$ 100 \\
+26     & PO7&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$ 100 \\
+24     & PO7&  90 $\pm$ 100 \\
+25     & Cz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & Cz&  90 $\pm$  90 \\
+24     & P3&  90 $\pm$ 100 \\
+25     & Cz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+21     & PO7&  90 $\pm$  95 \\
+24     & P3&  90 $\pm$ 100 \\
+25     & Fz&  90 $\pm$ 100 \\
+26     & Cz&  90 $\pm$ 100 \\
+>>>>>>> 7fd5fb623c57fcd85223a589fb552fd7924ea1b5
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  10 \\
+4     & PO8&  86 $\pm$  10 \\
+6     & Pz&  89 $\pm$  10 \\
+7     & Pz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Pz&  87 $\pm$   5 \\
+4     & P4&  86 $\pm$  15 \\
+6     & PO8&  89 $\pm$  15 \\
+7     & Pz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & P3&  87 $\pm$  15 \\
+4     & P3&  86 $\pm$  10 \\
+6     & Pz&  89 $\pm$  10 \\
+7     & P4&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  15 \\
+4     & Oz&  86 $\pm$  15 \\
+6     & P3&  89 $\pm$  15 \\
+7     & Pz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  25 \\
+4     & Fz&  86 $\pm$  20 \\
+6     & PO8&  89 $\pm$  30 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  30 \\
+4     & P3&  86 $\pm$  15 \\
+6     & Pz&  89 $\pm$  15 \\
+7     & Pz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  35 \\
+4     & Fz&  86 $\pm$  15 \\
+6     & P4&  89 $\pm$  20 \\
+7     & P3&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  45 \\
+4     & P4&  86 $\pm$  15 \\
+6     & Oz&  89 $\pm$  20 \\
+7     & PO8&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  35 \\
+4     & Fz&  86 $\pm$  25 \\
+6     & Fz&  89 $\pm$  15 \\
+7     & PO8&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  40 \\
+4     & P3&  86 $\pm$  15 \\
+6     & P3&  89 $\pm$  15 \\
+7     & Pz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Pz&  87 $\pm$  10 \\
+4     & Fz&  86 $\pm$  10 \\
+6     & Fz&  89 $\pm$   0 \\
+7     & P3&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO7&  87 $\pm$  15 \\
+4     & PO7&  86 $\pm$  15 \\
+6     & Cz&  89 $\pm$   5 \\
+7     & Cz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  15 \\
+4     & PO7&  86 $\pm$  10 \\
+6     & PO7&  89 $\pm$  15 \\
+7     & Fz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$   5 \\
+4     & Fz&  86 $\pm$  10 \\
+6     & Fz&  89 $\pm$   5 \\
+7     & Pz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO7&  87 $\pm$  15 \\
+4     & PO7&  86 $\pm$  10 \\
+6     & Fz&  89 $\pm$   5 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  15 \\
+4     & Fz&  86 $\pm$   5 \\
+6     & Fz&  89 $\pm$   5 \\
+7     & Fz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  10 \\
+4     & Cz&  86 $\pm$  10 \\
+6     & P3&  89 $\pm$   5 \\
+7     & Oz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  10 \\
+4     & Oz&  86 $\pm$  15 \\
+6     & Oz&  89 $\pm$  25 \\
+7     & PO7&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  10 \\
+4     & P4&  86 $\pm$  15 \\
+6     & PO8&  89 $\pm$  15 \\
+7     & Oz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & P3&  87 $\pm$  10 \\
+4     & PO8&  86 $\pm$  20 \\
+6     & Oz&  89 $\pm$  25 \\
+7     & PO8&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & Cz&  87 $\pm$  15 \\
+4     & PO7&  86 $\pm$   5 \\
+6     & PO8&  89 $\pm$  10 \\
+7     & Cz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & Oz&  87 $\pm$  10 \\
+4     & PO7&  86 $\pm$  10 \\
+6     & P4&  89 $\pm$  10 \\
+7     & Cz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  15 \\
+4     & Cz&  86 $\pm$   5 \\
+6     & Oz&  89 $\pm$  10 \\
+7     & Fz&  89 $\pm$   0 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  35 \\
+4     & PO7&  86 $\pm$  20 \\
+6     & P3&  89 $\pm$  10 \\
+7     & Pz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  30 \\
+4     & Fz&  86 $\pm$  10 \\
+6     & Pz&  89 $\pm$  10 \\
+7     & P3&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  45 \\
+4     & Pz&  86 $\pm$  15 \\
+6     & Oz&  89 $\pm$  15 \\
+7     & Cz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  40 \\
+4     & P4&  86 $\pm$  15 \\
+6     & Oz&  89 $\pm$  20 \\
+7     & Cz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  50 \\
+4     & Fz&  86 $\pm$  20 \\
+6     & Pz&  89 $\pm$  20 \\
+7     & Fz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  40 \\
+4     & Cz&  86 $\pm$  25 \\
+6     & P4&  89 $\pm$  20 \\
+7     & Fz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  50 \\
+4     & Cz&  86 $\pm$  15 \\
+6     & P4&  89 $\pm$  15 \\
+7     & Oz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  10 \\
+4     & Pz&  86 $\pm$  10 \\
+6     & PO7&  89 $\pm$  15 \\
+7     & Cz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$  10 \\
+4     & Pz&  86 $\pm$  10 \\
+6     & Fz&  89 $\pm$   5 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Pz&  87 $\pm$  15 \\
+4     & Cz&  86 $\pm$   5 \\
+6     & PO8&  89 $\pm$  10 \\
+7     & Fz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  15 \\
+4     & Cz&  86 $\pm$   5 \\
+6     & P4&  89 $\pm$  10 \\
+7     & PO7&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  20 \\
+4     & Pz&  86 $\pm$   5 \\
+6     & Oz&  89 $\pm$  15 \\
+7     & Cz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  15 \\
+4     & Fz&  86 $\pm$  10 \\
+6     & PO8&  89 $\pm$  15 \\
+7     & Cz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  15 \\
+4     & Oz&  86 $\pm$  10 \\
+6     & P4&  89 $\pm$  20 \\
+7     & Fz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  30 \\
+4     & Cz&  86 $\pm$  10 \\
+6     & P4&  89 $\pm$  25 \\
+7     & Cz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$  25 \\
+4     & P4&  86 $\pm$  15 \\
+6     & P4&  89 $\pm$  30 \\
+7     & P4&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & P4&  87 $\pm$  25 \\
+4     & Cz&  86 $\pm$  15 \\
+6     & Oz&  89 $\pm$  30 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$   5 \\
+4     & PO7&  86 $\pm$  25 \\
+6     & P3&  89 $\pm$   5 \\
+7     & Fz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & P3&  87 $\pm$  10 \\
+4     & Fz&  86 $\pm$  20 \\
+6     & P3&  89 $\pm$  10 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  25 \\
+4     & PO7&  86 $\pm$  15 \\
+6     & Fz&  89 $\pm$  10 \\
+7     & Cz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  20 \\
+4     & Oz&  86 $\pm$  20 \\
+6     & Pz&  89 $\pm$  20 \\
+7     & PO8&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  25 \\
+4     & PO8&  86 $\pm$  15 \\
+6     & Oz&  89 $\pm$  20 \\
+7     & P4&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  45 \\
+4     & Cz&  86 $\pm$  10 \\
+6     & Oz&  89 $\pm$  30 \\
+7     & Pz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  40 \\
+4     & Fz&  86 $\pm$  10 \\
+6     & Oz&  89 $\pm$  40 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  40 \\
+4     & P3&  86 $\pm$  15 \\
+6     & Oz&  89 $\pm$  40 \\
+7     & P4&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  45 \\
+4     & PO8&  86 $\pm$  20 \\
+6     & Oz&  89 $\pm$  50 \\
+7     & P4&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  55 \\
+4     & P4&  86 $\pm$  20 \\
+6     & Oz&  89 $\pm$  60 \\
+7     & P4&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$   5 \\
+4     & P4&  86 $\pm$   5 \\
+6     & PO7&  89 $\pm$  10 \\
+7     & Fz&  89 $\pm$   0 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$   0 \\
+4     & Fz&  86 $\pm$   0 \\
+6     & Fz&  89 $\pm$   0 \\
+7     & Fz&  89 $\pm$   0 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$   5 \\
+4     & Fz&  86 $\pm$   0 \\
+6     & P4&  89 $\pm$   5 \\
+7     & PO7&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$  10 \\
+4     & Cz&  86 $\pm$   5 \\
+6     & Oz&  89 $\pm$  15 \\
+7     & Pz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  25 \\
+4     & P4&  86 $\pm$   5 \\
+6     & Oz&  89 $\pm$  25 \\
+7     & Fz&  89 $\pm$   0 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  10 \\
+4     & Fz&  86 $\pm$   0 \\
+6     & PO8&  89 $\pm$  15 \\
+7     & Fz&  89 $\pm$   0 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  30 \\
+4     & Fz&  86 $\pm$   0 \\
+6     & P4&  89 $\pm$  10 \\
+7     & Fz&  89 $\pm$   0 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  25 \\
+4     & Fz&  86 $\pm$   0 \\
+6     & Oz&  89 $\pm$  35 \\
+7     & PO8&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  30 \\
+4     & Fz&  86 $\pm$   5 \\
+6     & Oz&  89 $\pm$  25 \\
+7     & Fz&  89 $\pm$   0 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  35 \\
+4     & P4&  86 $\pm$   5 \\
+6     & P4&  89 $\pm$  15 \\
+7     & PO8&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  25 \\
+4     & Fz&  86 $\pm$  15 \\
+6     & PO8&  89 $\pm$  20 \\
+7     & Cz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  30 \\
+4     & P3&  86 $\pm$  30 \\
+6     & P4&  89 $\pm$  30 \\
+7     & P3&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  45 \\
+4     & Fz&  86 $\pm$  30 \\
+6     & P4&  89 $\pm$  35 \\
+7     & Oz&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  60 \\
+4     & Fz&  86 $\pm$  30 \\
+6     & Pz&  89 $\pm$  30 \\
+7     & P3&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  50 \\
+4     & Cz&  86 $\pm$  35 \\
+6     & Pz&  89 $\pm$  40 \\
+7     & P4&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  60 \\
+4     & Cz&  86 $\pm$  30 \\
+6     & PO8&  89 $\pm$  55 \\
+7     & Oz&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  65 \\
+4     & Cz&  86 $\pm$  35 \\
+6     & PO8&  89 $\pm$  50 \\
+7     & Fz&  89 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  60 \\
+4     & Cz&  86 $\pm$  30 \\
+6     & P4&  89 $\pm$  50 \\
+7     & Pz&  89 $\pm$  30 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  75 \\
+4     & Cz&  86 $\pm$  40 \\
+6     & P4&  89 $\pm$  55 \\
+7     & PO7&  89 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  65 \\
+4     & Fz&  86 $\pm$  35 \\
+6     & PO8&  89 $\pm$  65 \\
+7     & PO7&  89 $\pm$  45 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  10 \\
+4     & PO7&  86 $\pm$  10 \\
+6     & PO7&  89 $\pm$  20 \\
+7     & Cz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  15 \\
+4     & P4&  86 $\pm$  10 \\
+6     & Fz&  89 $\pm$   5 \\
+7     & Cz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  15 \\
+4     & Oz&  86 $\pm$  10 \\
+6     & Oz&  89 $\pm$  25 \\
+7     & Pz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  15 \\
+4     & PO7&  86 $\pm$  20 \\
+6     & P4&  89 $\pm$  10 \\
+7     & P4&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  20 \\
+4     & PO7&  86 $\pm$  15 \\
+6     & Pz&  89 $\pm$  15 \\
+7     & Fz&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  25 \\
+4     & P4&  86 $\pm$  20 \\
+6     & Pz&  89 $\pm$  20 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  50 \\
+4     & Pz&  86 $\pm$  20 \\
+6     & Oz&  89 $\pm$  40 \\
+7     & P3&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & P3&  87 $\pm$  20 \\
+4     & Oz&  86 $\pm$  30 \\
+6     & Oz&  89 $\pm$  35 \\
+7     & PO8&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  40 \\
+4     & P3&  86 $\pm$  25 \\
+6     & Oz&  89 $\pm$  30 \\
+7     & PO7&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  50 \\
+4     & P4&  86 $\pm$  35 \\
+6     & Oz&  89 $\pm$  30 \\
+7     & P3&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  20 \\
+4     & P4&  86 $\pm$  15 \\
+6     & Cz&  89 $\pm$  15 \\
+7     & Cz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & Oz&  87 $\pm$  35 \\
+4     & P4&  86 $\pm$  10 \\
+6     & P4&  89 $\pm$  20 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  70 \\
+4     & Cz&  86 $\pm$  25 \\
+6     & Oz&  89 $\pm$  25 \\
+7     & Fz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & Oz&  87 $\pm$  80 \\
+4     & PO7&  86 $\pm$  20 \\
+6     & Oz&  89 $\pm$  35 \\
+7     & Oz&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  95 \\
+4     & P4&  86 $\pm$  35 \\
+6     & Oz&  89 $\pm$  35 \\
+7     & P4&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$ 100 \\
+4     & P4&  86 $\pm$  30 \\
+6     & Oz&  89 $\pm$  45 \\
+7     & Oz&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  95 \\
+4     & P4&  86 $\pm$  50 \\
+6     & Oz&  89 $\pm$  45 \\
+7     & Oz&  89 $\pm$  35 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$  95 \\
+4     & P4&  86 $\pm$  55 \\
+6     & Oz&  89 $\pm$  40 \\
+7     & Oz&  89 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$ 100 \\
+4     & P4&  86 $\pm$  45 \\
+6     & Pz&  89 $\pm$  40 \\
+7     & Oz&  89 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 47
+3     & PO8&  87 $\pm$ 100 \\
+4     & P4&  86 $\pm$  45 \\
+6     & Oz&  89 $\pm$  50 \\
+7     & Oz&  89 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  20 \\
+4     & PO8&  86 $\pm$  10 \\
+6     & P4&  89 $\pm$  10 \\
+7     & Fz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$  15 \\
+4     & Cz&  86 $\pm$  10 \\
+6     & Oz&  89 $\pm$  45 \\
+7     & Fz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  65 \\
+4     & Fz&  86 $\pm$   5 \\
+6     & Oz&  89 $\pm$  35 \\
+7     & Fz&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  60 \\
+4     & Cz&  86 $\pm$  10 \\
+6     & Oz&  89 $\pm$  60 \\
+7     & Oz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  75 \\
+4     & Cz&  86 $\pm$  15 \\
+6     & Oz&  89 $\pm$  70 \\
+7     & Oz&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  85 \\
+4     & Cz&  86 $\pm$  25 \\
+6     & Oz&  89 $\pm$  65 \\
+7     & Oz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  75 \\
+4     & Cz&  86 $\pm$  30 \\
+6     & Oz&  89 $\pm$  85 \\
+7     & Oz&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  70 \\
+4     & Cz&  86 $\pm$  25 \\
+6     & P4&  89 $\pm$  70 \\
+7     & P3&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$  75 \\
+4     & Fz&  86 $\pm$  35 \\
+6     & PO8&  89 $\pm$  65 \\
+7     & Oz&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  95 \\
+4     & Cz&  86 $\pm$  35 \\
+6     & P4&  89 $\pm$  75 \\
+7     & Oz&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  30 \\
+4     & PO7&  86 $\pm$  20 \\
+6     & Fz&  89 $\pm$  20 \\
+7     & Cz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  45 \\
+4     & PO7&  86 $\pm$  15 \\
+6     & P4&  89 $\pm$  35 \\
+7     & Fz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  80 \\
+4     & Fz&  86 $\pm$  25 \\
+6     & Oz&  89 $\pm$  60 \\
+7     & Pz&  89 $\pm$  25 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  80 \\
+4     & Fz&  86 $\pm$  30 \\
+6     & Oz&  89 $\pm$  75 \\
+7     & Oz&  89 $\pm$  45 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  85 \\
+4     & P4&  86 $\pm$  40 \\
+6     & Oz&  89 $\pm$  90 \\
+7     & PO8&  89 $\pm$  40 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  85 \\
+4     & Fz&  86 $\pm$  40 \\
+6     & Oz&  89 $\pm$  95 \\
+7     & Oz&  89 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  85 \\
+4     & Cz&  86 $\pm$  45 \\
+6     & Oz&  89 $\pm$  95 \\
+7     & Oz&  89 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  95 \\
+4     & Fz&  86 $\pm$  55 \\
+6     & Oz&  89 $\pm$  85 \\
+7     & PO8&  89 $\pm$  45 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  95 \\
+4     & Cz&  86 $\pm$  60 \\
+6     & Oz&  89 $\pm$  95 \\
+7     & PO8&  89 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$ 100 \\
+4     & Cz&  86 $\pm$  55 \\
+6     & Oz&  89 $\pm$ 100 \\
+7     & PO8&  89 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  15 \\
+4     & Fz&  86 $\pm$   0 \\
+6     & Oz&  89 $\pm$  15 \\
+7     & PO7&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  60 \\
+4     & Fz&  86 $\pm$   0 \\
+6     & P4&  89 $\pm$  25 \\
+7     & P4&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  70 \\
+4     & Oz&  86 $\pm$  10 \\
+6     & Oz&  89 $\pm$  80 \\
+7     & Oz&  89 $\pm$  10 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  95 \\
+4     & P4&  86 $\pm$  25 \\
+6     & Oz&  89 $\pm$  70 \\
+7     & PO8&  89 $\pm$   5 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Oz&  87 $\pm$  80 \\
+4     & P4&  86 $\pm$  55 \\
+6     & Oz&  89 $\pm$  80 \\
+7     & PO8&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  95 \\
+4     & P4&  86 $\pm$  35 \\
+6     & Oz&  89 $\pm$  95 \\
+7     & Oz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$ 100 \\
+4     & P4&  86 $\pm$  55 \\
+6     & Oz&  89 $\pm$  90 \\
+7     & P4&  89 $\pm$  45 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$ 100 \\
+4     & P4&  86 $\pm$  50 \\
+6     & Oz&  89 $\pm$ 100 \\
+7     & Oz&  89 $\pm$  50 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$ 100 \\
+4     & P4&  86 $\pm$  40 \\
+6     & Oz&  89 $\pm$ 100 \\
+7     & Oz&  89 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Fz&  87 $\pm$ 100 \\
+4     & P4&  86 $\pm$  45 \\
+6     & Oz&  89 $\pm$ 100 \\
+7     & Oz&  89 $\pm$  65 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Pz&  87 $\pm$  45 \\
+4     & Pz&  86 $\pm$  90 \\
+6     & P4&  89 $\pm$ 100 \\
+7     & Oz&  89 $\pm$  70 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Cz&  87 $\pm$  70 \\
+4     & Fz&  86 $\pm$  65 \\
+6     & Pz&  89 $\pm$  95 \\
+7     & Cz&  89 $\pm$  60 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & Pz&  87 $\pm$  95 \\
+4     & Pz&  86 $\pm$  75 \\
+6     & Pz&  89 $\pm$  90 \\
+7     & Pz&  89 $\pm$  55 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  25 \\
+4     & Fz&  86 $\pm$  15 \\
+6     & PO8&  89 $\pm$  20 \\
+7     & Cz&  89 $\pm$  15 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  30 \\
+4     & P3&  86 $\pm$  30 \\
+6     & P4&  89 $\pm$  30 \\
+7     & P3&  89 $\pm$  15 \\

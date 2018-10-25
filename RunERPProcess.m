@@ -1,5 +1,5 @@
-clear all
-close all
+clear all;
+close all;
 
 globalrepts1=[];
 globalrepts2=[];
@@ -29,24 +29,34 @@ globalks= [37; -1;...
      28;...
      29;...
      39; 28; 28; 28];
-run('ERPProcess.m')
-fdsfds
+%run('ERPProcess.m')
+
+%%
+clear globalspellerrep
 for globalrepetitions=1:10
     
     % MP1
+
     globalappyzscore=false;
     globalclassifier=6;
     globalfeaturetype=5;
     run('ERPProcess.m')
     globalrepts1=globalspellerrep;
     
+end
+    clear globalspellerrep
+for globalrepetitions=1:10
+    
     % MP 2
+
     globalappyzscore=false;
     globalclassifier=11;
     globalfeaturetype=4;
     run('ERPProcess.m')
     globalrepts2 = globalspellerrep;
-    
+end
+    clear globalspellerrep
+for globalrepetitions=1:10    
     % SIFT
     globalappyzscore=true;
     globalclassifier=6;
@@ -55,7 +65,9 @@ for globalrepetitions=1:10
     run('ERPProcess.m')
     globaldistancetype='euclidean';
     globalrepts3 = globalspellerrep;
-    
+end
+    clear globalspellerrep
+for globalrepetitions=1:10    
     % PE
     globalappyzscore=false;
     globalclassifier=6;
@@ -63,15 +75,20 @@ for globalrepetitions=1:10
     globalm=2;globalwindowsize=10;
     run('ERPProcess.m')
     globalrepts6 = globalspellerrep;
-    
+end
+    clear globalspellerrep
+for globalrepetitions=1:10    
     % SHCC
     globalappyzscore=false;
     globalclassifier=6;
     globalfeaturetype=7;
     run('ERPProcess.m')
     globalrepts7 = globalspellerrep;
-    
+end
+clear globalspellerrep
+for globalrepetitions=1:10   
     % SVM 
+
     globalappyzscore=false;
     globalclassifier=4;
     globalfeaturetype=4;
@@ -80,19 +97,3 @@ for globalrepetitions=1:10
 
 end
 
-%%
-figure;
-set(0, 'DefaultAxesFontSize',15);
-for subject=subjectRange
-    subplot(4,6,(find(subjectRange==subject)-1)*6+1);PlotOneSubjectOneMethod(channels,subject,globalrepts1);if ((find(subjectRange==subject)-1)==0) title('MP 1');end;axis([0 10 0 1.05]);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
-    subplot(4,6,(find(subjectRange==subject)-1)*6+2);PlotOneSubjectOneMethod(channels,subject,globalrepts2);if ((find(subjectRange==subject)-1)==0) title('MP 2');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
-    subplot(4,6,(find(subjectRange==subject)-1)*6+3);PlotOneSubjectOneMethod(channels,subject,globalrepts3);if ((find(subjectRange==subject)-1)==0) title('SIFT');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
-    subplot(4,6,(find(subjectRange==subject)-1)*6+4);PlotOneSubjectOneMethod(channels,subject,globalrepts6);if ((find(subjectRange==subject)-1)==0) title('PE');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
-    subplot(4,6,(find(subjectRange==subject)-1)*6+5);PlotOneSubjectOneMethod(channels,subject,globalrepts7);if ((find(subjectRange==subject)-1)==0) title('SHCC');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
-    subplot(4,6,(find(subjectRange==subject)-1)*6+6);PlotOneSubjectOneMethod(channels,subject,globalrepts4);if ((find(subjectRange==subject)-1)==0) title('SVM');end;set(gca, 'YTickLabel', []);if (subject ~= 26) set(gca, 'XTickLabel', []);end;
-end
-axis([0 10 0 1.05]);
-%ylabel('Performance')
-%set(hx,'fontSize',40);
-%set(hy,'fontSize',40);
-set(gcf, 'Position', [1, 1, 730, 329])
