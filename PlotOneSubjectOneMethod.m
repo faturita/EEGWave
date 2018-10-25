@@ -39,7 +39,7 @@ for channel=[cmin,cmax]
     plot(resh,'LineWidth',2,'MarkerSize',1,'color',C(channel,:),...
     'linestyle',linestyle{channel},'marker',mark{channel});
 
-    text(r(channel),resh(r(channel))+0.1,channels{r(channel)});
+    text(r(channel),resh(r(channel))+0.1,channels{channel});
 
     %plot(resh,'LineWidth',2,'MarkerSize',3,'color',C(channel,:),...
     %'linestyle',linestyle{channel},'marker',mark{channel});

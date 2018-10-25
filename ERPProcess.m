@@ -88,10 +88,12 @@ k=globalk;
 % =====================================
 
 % EEG(subject,trial,flash)
-EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,false,0,randomdelay,randomamplitude);
-
-
-EEG = DrugEEG(subjectRange,globalsignalgain,EEG,globalrandomdelay,globalrandomamplitude);
+if (subjectRange(1)<20)
+    EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,false,0,randomdelay,randomamplitude);
+    EEG = DrugEEG(subjectRange,globalsignalgain,EEG,globalrandomdelay,globalrandomamplitude);
+else
+    EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,true,0,randomdelay,randomamplitude);    
+end
 
 % CONTROL
 %EEG = randomizeEEG(EEG);
