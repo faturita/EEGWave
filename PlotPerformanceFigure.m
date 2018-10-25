@@ -30,4 +30,7 @@ axis([0 10 0 1.05]);
 %set(hx,'fontSize',40);
 %set(hy,'fontSize',40);
 set(gcf, 'Position', [1, 1, 730, 329])
+
+%print(f, 'PerformanceBCICompetition','-deps');
 %print(f,'../../Documents/Research/Thesis/images/CrossPerformanceTestAmplitude','-deps')
+

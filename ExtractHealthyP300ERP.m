@@ -43,7 +43,6 @@ subjectRange=[1 3 4 6 7 9 10 11 13 14 16 17 18 19 20 21 22 23];
 subjectRange=[1 11 14   16 17 20 22 23];
 %subjectRange=22;
 subjectRange=[3,4,6,7];
-subjectRange=[3];
 epochRange = 1:120*7*5;
 channelRange=1:8;
 labelRange = [];
@@ -63,7 +62,7 @@ Fs=250;
 windowsize=1;
 expcode=2400;
 show=0;
-downsize=1;
+downsize=15;
 
 featuretype=4; classifier=4; applyzscore=true;
 timescale=1; amplitude=1;artifactcheck=true;
@@ -74,7 +73,7 @@ timescale=1; amplitude=1;artifactcheck=true;
 % =====================================
 
 % EEG(subject,trial,flash)
-EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,false,false,0,false,false);
+EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,false,0,false,false);
 
 % CONTROL
 %EEG = randomizeEEG(EEG);
@@ -209,20 +208,22 @@ for subject=subjectRange
             end
         end
     end
+    save(sprintf('routput-subject-%0d.mat',subject),'routput');
+    save(sprintf('EEG-%0d.mat',subject),'EEG');
 end
 
 
-save(sprintf('routput-subject-%0d.mat',subject),'routput');
-save(sprintf('EEG-%0d.mat',subject),'EEG');
 
+
+fdsfds
 %%
 figure;
 hold on
 for r=1:6
-    subplot(2,6,r);plot( routput{3}{1}{1}{r} );
+    subplot(2,6,r);plot( routput{subject}{1}{1}{r} );
 end
 for c=7:12
-    subplot(2,6,c);plot( routput{3}{1}{1}{c} );
+    subplot(2,6,c);plot( routput{subject}{1}{1}{c} );
 end
 
 hold off
@@ -264,7 +265,7 @@ for trial=1:35
     %figure;plot(routput{subject}{2}{1}{9});axis([0 256 -10 10]);
 end
 
-
+fsd
 %%
 artifactcount = 0;   
 randomdelay=false;
