@@ -1,11 +1,12 @@
-function EEG = DrugEEG(subjectRange,EEG)
+function EEG = DrugEEG(subjectRange,signalgain,EEG,randomdelay,randomamplitude)
+
 
 for subject=subjectRange
     routput=open(sprintf('routput-subject-%0d.mat',subject));
     routput = routput.routput;
 
     EEGs=open(sprintf('EEG-%0d.mat',subject));
-    EEGs=EEG.EEG;  
+    EEGs=EEGs.EEG;  
 
     if (subject == 3)
         trial=8;class=12;
@@ -17,7 +18,13 @@ for subject=subjectRange
         trial=7;class=3;
     end
 
-    t1=routput{subject}{trial}{1}{class};
+    template=routput{subject}{trial}{1}{class};
+    
+    cutrange=2:16;
+    fullrange=1:16;
+
+    w = gausswin(size(template(cutrange,:),1));
+    wf = gausswin(size(template(fullrange,:),1));
 
     for trial=1:35
         for seq=1:120
@@ -25,12 +32,32 @@ for subject=subjectRange
             if (EEG(subject,trial,seq).label == 2)
 
                 ti=randi(35);rep=randi(120);
-                while (EEG(subject,ti,rep).label==2)
+                while (EEGs(subject,ti,rep).label==2)
                     ti=randi(35);rep=randi(120);
                 end
-                t2 = EEG(subject,ti,rep).EEG;
+                baseline = EEGs(subject,ti,rep).EEG;
+                            
+                t1=template;
+                
+                
+                if (randomamplitude)
+                    reductionrate=randi(100,1)/100;
 
-                EEG(subject,trial,seq).EEG = t1 + t2;
+                    for ch=1:8
+                        t1(cutrange,ch) = template(cutrange,ch)-(template(cutrange,ch)*reductionrate).*w;
+                    end        
+                end
+                
+                if (randomdelay)
+                    delaylag = randi(floor(16*1*0.4),1,1)-floor(16*1*0.4);
+                    tt = zeros(size(template));
+
+                    tt(1:end+delaylag,:) = t1(-delaylag+1:end,:);
+                    t1=tt;
+                end
+
+
+                EEG(subject,trial,seq).EEG = t1*signalgain + baseline;
 
             end
         end
