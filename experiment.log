@@ -3528,3 +3528,9 @@ st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
 4     & Fz&  86 $\pm$  30 \\
 6     & P4&  89 $\pm$  35 \\
 7     & Oz&  89 $\pm$  20 \\
+Experiment:  K = 7  
+st 3.000000 sv 3.000000 scale 4.000000 timescale 4.000000 qKS 29
+3     & PO8&  87 $\pm$  25 \\
+4     & Fz&  86 $\pm$  15 \\
+6     & PO8&  89 $\pm$  20 \\
+7     & Cz&  89 $\pm$  15 \\
