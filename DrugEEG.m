@@ -1,6 +1,5 @@
 function EEG = DrugEEG(subjectRange,signalgain,EEG,randomdelay,randomamplitude)
 
-
 for subject=subjectRange
     routput=open(sprintf('routput-subject-%0d.mat',subject));
     routput = routput.routput;
@@ -29,7 +28,14 @@ for subject=subjectRange
     for trial=1:35
         for seq=1:120
 
-            if (EEG(subject,trial,seq).label == 2)
+            if (EEG(subject,trial,seq).label == 1)
+                ti=randi(35);rep=randi(120);
+                while (EEGs(subject,ti,rep).label==2)
+                    ti=randi(35);rep=randi(120);
+                end
+                EEG(subject,trial,seq).EEG = EEGs(subject,ti,rep).EEG;           
+                
+            else
 
                 ti=randi(35);rep=randi(120);
                 while (EEGs(subject,ti,rep).label==2)
@@ -38,7 +44,6 @@ for subject=subjectRange
                 baseline = EEGs(subject,ti,rep).EEG;
                             
                 t1=template;
-                
                 
                 if (randomamplitude)
                     reductionrate=randi(100,1)/100;
@@ -55,9 +60,8 @@ for subject=subjectRange
                     tt(1:end+delaylag,:) = t1(-delaylag+1:end,:);
                     t1=tt;
                 end
-
-
-                EEG(subject,trial,seq).EEG = t1*signalgain + baseline;
+                signalgain = 1;
+                EEG(subject,trial,seq).EEG =  baseline;
 
             end
         end
