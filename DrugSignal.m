@@ -25,14 +25,36 @@ for i=1:12
     %title(sprintf('Label %d',EEG(8,2,i).label));
 end
 
+% H contains the trials and row/column label that matches.
+h=[];
+subject=8;
 
-template1=routput{8}{2}{1}{8};
-template2=routput{8}{2}{1}{1};
+for trial=1:35
+    for classes=1:1;for i=1:12 hit{subject}{trial}{classes}{i} = 0; end; end
+    for flash=1:120
+        hit{subject}{trial}{classes}{EEG(subject,trial,flash).stim} = EEG(subject,trial,flash).label;
+    end
+end
 
+for trial=1:35
+    for i=1:12
+        if (hit{subject}{trial}{classes}{i} == 2)
+            h = [h; [trial i]];
+        end
+    end
+end
 
+% Pick one
+p = randi(70);
+tr= h(p,1);
+fls= h(p,2);
+
+% Choose the template (any) of subject 8.  Trail 2, 1 is perfect.
+template1=routput{8}{tr}{1}{fls};
+
+% Remove some samples to adjust the frequency.
 for i=1:43:256
     template1(i,:) = [];
-    template2(i,:) = [];
 end
 
 Fs=250;

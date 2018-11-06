@@ -232,6 +232,7 @@ hold off
 
 %%
 %% Sample Figure with ERP superimposed on EEG.
+subject=3;
 for trial=1:35
     figure;
     set(0, 'DefaultAxesFontSize',15);

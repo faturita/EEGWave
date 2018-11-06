@@ -9,15 +9,16 @@ globalrepts4=[];
 globalclassifier=Classifiers.svm;
 globalfeaturetype=Features.singlechannel;
 globalrepetitions=10;
-globalapplyzscore=false;
-globalrandomdelay=true;
-globalrandomamplitude=false;
+%globalapplyzscore=false;
+%globalrandomdelay=false;
+%globalrandomamplitude=false;
 globaldistancetype='euclidean';
 globalk=7;
 globalsignalgain=2.2;
 globalsignalsize=64;
 % globalsubjectrange=[21,24,25,26];
-globalsubjectrange=[3,4,6,7];
+%globalsubjectrange=[3,4,6,7];
+%globalsubjectrange=[3];
 globalks= [37; -1;...
      16;    13;  -1;  45;    47; -1; 35; 31; 28;...
      -1; 39;    35;...
@@ -30,17 +31,17 @@ globalks= [37; -1;...
 clear globalspellerrep
     %run('ERPProcess.m')
     
-for globalrepetitions=5:10
-    % SVM 
-
-    globalapplyzscore=false;
-    globalclassifier=4;
-    globalfeaturetype=4;
-    run('ERPProcess.m')
-    globalrepts4 = globalspellerrep;
-    
-end
-fdsfs
+% for globalrepetitions=1:10
+%     % SVM 
+% 
+%     globalapplyzscore=false;
+%     globalclassifier=4;
+%     globalfeaturetype=2;
+%     run('ERPProcess.m')
+%     globalrepts4 = globalspellerrep;
+%     
+% end
+% fdsfs
 %%
 clear globalspellerrep
 for globalrepetitions=1:10
@@ -48,7 +49,7 @@ for globalrepetitions=1:10
     % MP1
 
     globalapplyzscore=false;
-    globalclassifier=6;
+    globalclassifier=1;
     globalfeaturetype=5;
     run('ERPProcess.m')
     globalrepts1=globalspellerrep;
