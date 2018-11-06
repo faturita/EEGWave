@@ -19,79 +19,42 @@ for globalrepetitions=1:15
     globalclassifier=6;
     globalfeaturetype=5;
     run('BCICompetitionProcess.m')
-    globalrepts1 = [globalrepts1 totals(:,6)];  
-    globalchannel1 = totals(:,5);
+    globalrepts1 = globalspellerrep;
     
     % MP 2
     globalappyzscore=false;
     globalclassifier=11;
     globalfeaturetype=4;
     run('BCICompetitionProcess.m')
-    globalrepts2 = [globalrepts2 totals(:,6)];  
-    globalchannel2 = totals(:,5);
+    globalrepts2 = globalspellerrep;
     
     % SIFT
     globalappyzscore=true;
     globalclassifier=6;
     globalfeaturetype=1;
     run('BCICompetitionProcess.m')
-    globalrepts3 = [globalrepts3 totals(:,6)];
-    globalchannel3 = totals(:,5);
+    globalrepts3 = globalspellerrep;
     
     % SVM 
     globalappyzscore=false;
     globalclassifier=4;
     globalfeaturetype=4;
     run('BCICompetitionProcess.m')
-    globalrepts4 = [globalrepts4 totals(:,6)];
-    globalchannel4 = totals(:,5);
-     
-    % NN m-c
-%     globalappyzscore=false;
-%     globalclassifier=1;
-%     globalfeaturetype=2;
-%     run('BCICompetitionProcess.m')
-%     globalrepts5 = [globalrepts5 totals(:,6)];
-%     globalchannel5 = totals(:,5);
+    globalrepts4 = globalspellerrep;
     
     % PE
     globalappyzscore=false;
     globalclassifier=6;
     globalfeaturetype=6;
     run('BCICompetitionProcess.m')
-    globalrepts6 = [globalrepts6 totals(:,6)];  
-    globalchannel6 = totals(:,5);
+    globalrepts6 = globalspellerrep;
     
     % SHCC
     globalappyzscore=false;
     globalclassifier=6;
     globalfeaturetype=7;
     run('BCICompetitionProcess.m')
-    globalrepts7 = [globalrepts7 totals(:,6)]; 
-    globalchannel7 = totals(:,5);
+    globalrepts7 = globalspellerrep;
     
-%     % NN s-c
-%     globalappyzscore=false;
-%     globalclassifier=1;
-%     globalfeaturetype=4;
-%     run('BCICompetitionProcess.m')
-%     globalrepts8 = [globalrepts8 totals(:,6)]; 
-%     globalchannel8 = totals(:,5);
-%     
-%     % Raw signal single channel
-%     globalappyzscore=false;
-%     globalclassifier=6;
-%     globalfeaturetype=4;
-%     run('BCICompetitionProcess.m')
-%     globalrepts9 = [globalrepts9 totals(:,6)]; 
-%     globalchannel9 = totals(:,5);
-    
-%     % Raw signal multi channel
-%     globalappyzscore=false;
-%     globalclassifier=6;
-%     globalfeaturetype=2;
-%     run('BCICompetitionProcess.m')
-%     globalrepts10 = [globalrepts10 totals(:,6)]; 
-%     globalchannel10 = totals(:,5);
 end
     
