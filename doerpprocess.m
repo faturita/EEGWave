@@ -1,4 +1,4 @@
-function [epochRange,F, SBJ] = doerpprocess(trainingRange,testRange,papplyzscore,pclassifier,pfeaturetype,prandomdelay,prandomamplitude,globalrepetitions,globalsignalgain,globalsignalsize)
+function [epochRange,F, SBJ] = doerpprocess(trainingRange,testRange,papplyzscore,pclassifier,pfeaturetype,prandomdelay,prandomamplitude,globalrepetitions,globalsignalgain,globalsignalsize,globalks)
 applyzscore=papplyzscore;
 classifier=pclassifier;
 featuretype=pfeaturetype;
@@ -40,7 +40,7 @@ subjectRange=[1 3 4 6 7 9 10 11 13 14 16 17 18 19 20 21 22 23];
 %2,15, 8 high impeadance empty trials.
 subjectRange=[1 11 14   16 17 20 22 23];
 %subjectRange=22;
-subjectRange=21;
+subjectRange=globalsubjectrange;
 epochRange = 1:120*7*5;
 channelRange=1:8;
 labelRange = [];
@@ -84,8 +84,12 @@ randomamplitude=prandomamplitude;
 % =====================================
 
 % EEG(subject,trial,flash)
-EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,0,randomdelay,randomamplitude);
-
+if (subjectRange(1)<20)
+    EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,false,0,randomdelay,randomamplitude);
+    EEG = DrugEEG(subjectRange,globalsignalgain,EEG,globalrandomdelay,globalrandomamplitude);
+else
+    EEG = prepareEEG(Fs,windowsize,downsize,120,subjectRange,1:8,globalsignalgain,true,true,0,randomdelay,randomamplitude);    
+end
 % CONTROL
 %EEG = randomizeEEG(EEG);
 
@@ -109,6 +113,8 @@ sqKS = [37; 16; 13; 45; 47; 35; 31; 28;39; 33;   28;  ...
      28;...
      29;...
      39];
+ 
+ sqKS=globalks;
 
 %%
 % Build routput pasting epochs toghether...
@@ -372,7 +378,7 @@ for subject=subjectRange
                         
                         for channel=channelRange
                             feature = rsignal{i}(:,channel);
-                            feature = (1/norm(feature))*feature;
+                            %feature = (1/norm(feature))*feature;
                             
                             F(channel,label,epoch).hit = hit{subject}{trial}{classes}{i};
                             F(channel,label,epoch).descriptors = feature;

@@ -16,6 +16,17 @@ channelRange=1:8;
 trainingRange=[];
 testRange=[];
 subjectRange=[21];
+
+globalks= [37; -1;...
+     16;    13;  -1;  45;    47; -1; 35; 31; 28;...
+     -1; 39;    35;...
+     -1; 50;...
+     37;...
+     43;    36;    33;...
+     28;...
+     29;...
+     39; 28; 28; 28];
+ 
 for globalrepetitions=1:10
     
     % MP1
@@ -31,6 +42,10 @@ for globalrepetitions=1:10
     globalrepts1 = [globalrepts1 1-ErrorPerChannel(21,b)];  
     globalchannel1 = b;
     
+    
+end
+hhhh
+for globalrepetitions=1:10
     % MP 2
     globalappyzscore=false;
     globalclassifier=11;
