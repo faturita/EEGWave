@@ -12,6 +12,7 @@ globalrepts9=[];
 globalrepts10=[];
 globalsignalgain=2.2;
 globalsignalsize=168;
+clear globalspellerrep;
 for globalrepetitions=1:15
     
     % MP1
@@ -20,6 +21,10 @@ for globalrepetitions=1:15
     globalfeaturetype=5;
     run('BCICompetitionProcess.m')
     globalrepts1 = globalspellerrep;
+end
+
+clear globalspellerrep;
+for globalrepetitions=1:15
     
     % MP 2
     globalappyzscore=false;
@@ -27,6 +32,10 @@ for globalrepetitions=1:15
     globalfeaturetype=4;
     run('BCICompetitionProcess.m')
     globalrepts2 = globalspellerrep;
+end
+
+clear globalspellerrep;
+for globalrepetitions=1:15
     
     % SIFT
     globalappyzscore=true;
@@ -34,6 +43,10 @@ for globalrepetitions=1:15
     globalfeaturetype=1;
     run('BCICompetitionProcess.m')
     globalrepts3 = globalspellerrep;
+end
+
+clear globalspellerrep;
+for globalrepetitions=1:15
     
     % SVM 
     globalappyzscore=false;
@@ -41,6 +54,10 @@ for globalrepetitions=1:15
     globalfeaturetype=4;
     run('BCICompetitionProcess.m')
     globalrepts4 = globalspellerrep;
+end
+
+clear globalspellerrep;
+for globalrepetitions=1:15
     
     % PE
     globalappyzscore=false;
@@ -48,6 +65,10 @@ for globalrepetitions=1:15
     globalfeaturetype=6;
     run('BCICompetitionProcess.m')
     globalrepts6 = globalspellerrep;
+end
+
+clear globalspellerrep;
+for globalrepetitions=1:15
     
     % SHCC
     globalappyzscore=false;

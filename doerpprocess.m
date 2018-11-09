@@ -1,4 +1,4 @@
-function [epochRange,F, SBJ] = doerpprocess(trainingRange,testRange,papplyzscore,pclassifier,pfeaturetype,prandomdelay,prandomamplitude,globalrepetitions,globalsignalgain,globalsignalsize,globalks)
+function [epochRange,F, SBJ] = doerpprocess(trainingRange,testRange,papplyzscore,pclassifier,pfeaturetype,prandomdelay,prandomamplitude,globalsubjectrange,globalrepetitions,globalsignalgain,globalsignalsize,globalks)
 applyzscore=papplyzscore;
 classifier=pclassifier;
 featuretype=pfeaturetype;

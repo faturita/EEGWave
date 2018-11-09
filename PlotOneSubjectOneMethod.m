@@ -1,4 +1,8 @@
-function PlotOneSubjectOneMethod(channels,subject,grepts)
+function PlotOneSubjectOneMethod(channels,subject,grepts,nolegend)
+
+if (nargin<4)
+    nolegend=false;
+end
 
 C(1,:)=[1 0 1];
 C(2,:)=[1 0 0];
@@ -22,22 +26,39 @@ mark{8}='d';
 
 linestyle={'-','--',':','-.',':','--','-','-.'};
 
+% The structure of grepts is (subject, channel, numberofrepetitions)
+% We are getting the mean on each channel and choosing the bigger and
+% smaller
 c = permute(grepts(subject,:,:),[1 3 2]);
-d=reshape(mean(c),[],8,1);
+d=reshape(mean(c),[],size(grepts,2),1);
 [val,cmax] =max(d);
 [val,cmin] =min(d);
+cmax=cmax(1);
+cmin=cmin(1);
 hold on
-r=zeros(1,8);
+r=zeros(1,size(grepts,2));
 r(cmin) = 5;
 r(cmax) = 8;
+
+if (size(grepts,2)>8) || (~nolegend)
+    cl=zeros(size(grepts,2),3);
+    cl(cmin,:) = C(2,:);
+    cl(cmax,:) = C(4,:);
+else
+    cl = C;
+end
+
+
+
+
 for channel=[cmin,cmax]
     resh=grepts(subject,channel,:);
     %C = permute(A,[1 3 2]);
 
     
     resh = reshape(resh,[],size(resh,2),1);
-    plot(resh,'LineWidth',2,'MarkerSize',1,'color',C(channel,:),...
-    'linestyle',linestyle{channel},'marker',mark{channel});
+    plot(resh,'LineWidth',2,'MarkerSize',1,'color',cl(channel,:),...
+    'linestyle',linestyle{mod(channel,8)+1},'marker',mark{mod(channel,8)+1});
 
     text(r(channel),resh(r(channel))+0.1,channels{channel});
 

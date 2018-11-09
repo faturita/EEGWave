@@ -44,7 +44,7 @@ for channel=channelRange
     h(channel) = plot(NaN,NaN,'LineWidth',2,'MarkerSize',1,'color',C(channel,:),...
     'linestyle',linestyle{channel},'marker',mark{channel});
 end
-legend(h, channels);
+%legend(h, channels);
 ylabel('Performance','visible','on');
 xlabel('Intensifications','visible','on');
 
