@@ -146,11 +146,23 @@ int main( int argc, char **argv)
 
     if (argc < 2)
     {
-        std::cout << "bcisift send | recv | randonline | train | online | udp | testclassify | trainclassify | testsignals | rand " << std::endl;
+        std::cout << argv[0] << " send | recv | randonline | train | online | udp | testclassify | trainclassify | testsignals | rand " << std::endl;
         return -1;
     }
 
+    if (strcmp(argv[1],"image")==0)
+    {
+        int N =256;
+        int Fs = 256;
+        double signal[N];
+        memset(signal,0,sizeof(double)*N);
+        signal[128] = 20;
+        signal[120] = signal[136] = -1200;
+        //randomSignal(signal,512,20);
 
+        ploteegimage(signal,N,240,1,1,true,"1");
+    }
+    else
     if (strcmp(argv[1],"send")==0)
     {
         sendeegandmarkers();

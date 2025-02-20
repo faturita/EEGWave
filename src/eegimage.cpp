@@ -238,20 +238,17 @@ void zscore(double *signal, int length)
 
 }
 
-
-
-int eegimage(float *descr,double signal[], int defaultheight, int length, int gammat, int gamma, bool normalize, std::string windowname)
+int eegimage(cv::Mat &image, int &height, int &width, int &zerolevel, double signal[], int defaultheight, int length, int gammat, int gamma, bool normalize, std::string windowname)
 {
     //cv::namedWindow(windowname,cv::WINDOW_NORMAL);
 
-    int height;
-    int width;
-    int zerolevel=floor(  abs(min(signal, length))     );
+    zerolevel=floor(  abs(min(signal, length))     );
 
     if (normalize)
     {
         zscore(signal,length);
     }
+
 
     // FIXME: Adjust height accordingly.
 
@@ -270,16 +267,12 @@ int eegimage(float *descr,double signal[], int defaultheight, int length, int ga
     printf("Height, Width: %d, %d\n", height, width);
     printf("Zerolevel: %d\n", zerolevel);
 
-    cv::Mat image(height,width,CV_8U,cv::Scalar(0));
+    image = cv::Mat(height,width,CV_8U,cv::Scalar(0));
     cv::Scalar color(255,255,255);
 
     int idx = 1;
 
-
-
     double avg = mean(signal,length);
-
-
 
     for(idx=0;idx<length-1;idx++)
     {
@@ -303,7 +296,40 @@ int eegimage(float *descr,double signal[], int defaultheight, int length, int ga
     }
 
 
-    std::cout << "-------------" << std::endl;
+    std::cout << "-------------" << std::endl;    
+
+    std::string ext = ".png";
+    
+    cv::imwrite(windowname + ext, image );
+
+    return 1;
+}
+
+int ploteegimage(double signal[], int defaultheight, int length, int gammat, int gamma, bool normalize, std::string windowname)
+{
+    
+    int height;
+    int width;
+    int zerolevel;
+
+    cv::Mat image;
+
+    eegimage(image, height, width, zerolevel,signal,defaultheight, length, gammat, gamma, normalize, windowname);
+
+    return 1;
+
+}
+
+int eegimage(float *descr,double signal[], int defaultheight, int length, int gammat, int gamma, bool normalize, std::string windowname)
+{
+
+    int height;
+    int width;
+    int zerolevel;
+
+    cv::Mat image;
+
+    eegimage(image, height, width, zerolevel,signal,defaultheight, length, gammat, gamma, normalize, windowname);
 
     double deltaS = sqrt(2.0) * 3.0 * 5.0;
 
@@ -381,7 +407,7 @@ int eegimage(double signal[],int defaultheight, int length, int gammat, int gamm
 }
 
 
-int eegimage(double avg, double data)
+int eegimage(double avg, double datapoint)
 {
     // 1 La imagen queda igual
     // 2 La imagen se ajusta a toda la pantalla y se resizea.
@@ -397,7 +423,7 @@ int eegimage(double avg, double data)
     {
         //cv::Point pt3(idx+=timestep,100+randInt(50-err,50+err)-50);
 
-        heightvalue = (imageheight/2)+(int)data - (int)avg-1;
+        heightvalue = (imageheight/2)+(int)datapoint - (int)avg-1;
 
         if (heightvalue<0) heightvalue = 1;
         if (heightvalue>imageheight) heightvalue = (imageheight-1);
@@ -443,13 +469,17 @@ int eegimage(double avg, double data)
 
     }
 
+    std::string ext = ".jpg";
+    std::string windowname = "brainwaves";
+    cv::imwrite(windowname + ext, image );
+
     return 1;
 
 }
 
 
 
-int eegiamage(double avg, double data)
+int eegiamage(double avg, double datapoint)
 {
     int option = 1;
 
@@ -514,7 +544,7 @@ int eegiamage(double avg, double data)
     {
         //cv::Point pt3(idx+=timestep,100+randInt(50-err,50+err)-50);
 
-        int val = (imageheight/2)+(int)data - (int)avg;
+        int val = (imageheight/2)+(int)datapoint - (int)avg;
 
         if (val<0) val = 1;
         if (val>imageheight) val = (imageheight-1);

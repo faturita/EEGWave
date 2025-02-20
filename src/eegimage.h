@@ -17,6 +17,8 @@ void printdescriptor(float *descr);
 
 void zscore(double *signal, int length);
 
+int ploteegimage(double signal[], int defaultheight, int length, int gammat, int gamma, bool normalize, std::string windowname);
+
 #endif // EEGIMAGE_H
 
 
