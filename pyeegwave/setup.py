@@ -1,10 +1,19 @@
 from distutils.core import setup, Extension
 
+import os
+
+OpenCV_DIR = os.environ['OpenCV_DIR']
+
+print('OpenCV_DIR:', OpenCV_DIR)
+
+OPENCV_LIB = OpenCV_DIR + '/lib'
+OPENCV_INCLUDE = OpenCV_DIR + '/include/opencv4/'
+
 module1 = Extension('pyeegwave',
                     include_dirs = [
                     '/usr/local/include',
                     '/usr/local/include/opencv4/',
-                    '/Users/rramele/opencv/include/opencv4/',
+                    OPENCV_INCLUDE,
                     '/opt/local/include/',
                     '../src/',
                     ],
@@ -21,7 +30,7 @@ module1 = Extension('pyeegwave',
                     'lsl',
                     'vl'],
                     library_dirs = ['/usr/local/lib',
-                    '/Users/rramele/opencv/lib',
+                    OPENCV_LIB,
                     '/opt/local/lib','.'
                     ],
                     sources = ['pyeegwave.cpp',
@@ -39,7 +48,7 @@ module1 = Extension('pyeegwave',
 setup (name = 'pyeegwave',
        version = '1.0',
        description = 'EEGWave Routine for python',
-       author = 'Rodrigo Ramele',
+       author = 'faturita',
        author_email = 'rramele@gmail.com',
        url = 'https://docs.python.org/extending/building',
        long_description = '''
