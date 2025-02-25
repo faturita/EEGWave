@@ -1,4 +1,4 @@
-OPENCV_DIR=/Users/rramele/opencv
+OPENCV_DIR=$(OpenCV_DIR)
 CC = g++
 CFLAGS = -O3 -std=c++17 -w -g -Wall -I/usr/include -I/opt/local/include/  -fpermissive -I$(OPENCV_DIR)/include/opencv4/
 PROG = eegwave

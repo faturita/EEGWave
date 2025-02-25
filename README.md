@@ -1,7 +1,5 @@
 # EEGWave 
 
- export DYLD_LIBRARY_PATH=/Users/rramele/opencv/lib
-
 This program takes a monochannel signal, a time series of doubles, and converts that signal into an image, a standardized plot.  It takes the image and use a variant of the SIFT descriptor to capture their visual shape and retuns a descriptor which represents that shape.
 
 ![SIFT](images/sift.png)
@@ -12,9 +10,7 @@ if wavepatterns are presented in a given signal segment.
 
 The library uses:
 
-- OpenCV 3.4.2
-- VlFeat: their fastest SIFT implementation, a modified version.
-- KFR: A very fast signal processing library (c7cd3a9bcc73a10bbe0ba767d7bb6e0804ef8821)
+- OpenCV 4.x
 - LSL: Labstreamlayer protocol for connecting to EEG sources (956a7137e588a4bc0c9618a4451d6ebc6b66966b)
 
 # Usage
@@ -33,33 +29,14 @@ The list 'descr' is a SIFT^ descriptor which represents the signal shape, and ca
 
 ## Mac Installation
 
-OpenCV is tricky to install on Mac, this is the best and easier way that I found so far:
-
-First, install brew.  Then do this
-
-```
- brew tap homebrew/science
- brew install opencv
-```
- 
-# Add into the .pro file
-
-```
- LIBS += -L/usr/local/lib \
-    -lopencv_core \
-    -lopencv_imgproc \
-    -lopencv_highgui \
-    -lopencv_objdetect \
-    -lopencv_calib3d
-
- INCLUDEPATH += /usr/local/include/opencv
-```
-
-And the most important part for Yosemite, add this into the .pro file:
-
-```
-QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.9
-```
+  make clean
+  export OpenCV_DIR=LOCATION
+  make
+  make libshared
+  . ./ew/bin/activate # Activate any environment that you may have
+  export DYLD_LIBRARY_PATH=/Users/rramele/opencv/lib
+  cd pyeegwave
+  python setup.py build install
 
 ## Ubuntu Installation
 
@@ -90,14 +67,6 @@ Download and unpack sources
  sudo make install
  ```
  
-# VLFeat
-
-```
- git clone https://github.com/faturita/vlfeat
- cd vlfeat
- make DISABLE_OPENMP=yes
- ```
- 
 # LSL
 
 ```
@@ -118,6 +87,8 @@ Download and unpack sources
 * http://tilomitra.com/opencv-on-mac-osx/
 * http://stackoverflow.com/questions/21811858/opencv-mac-os-x-qt-creator-strange-linking-bug
 * https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/UsingDynamicLibraries.html
+* https://learn.microsoft.com/es-es/windows/wsl/install
+
 
 
 
