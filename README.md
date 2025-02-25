@@ -27,7 +27,7 @@ print(len(descr))
 
 The list 'descr' is a SIFT^ descriptor which represents the signal shape, and can be used later for comparision.
 
-## Mac Installation
+## Compiling and running
 
 ```
  make clean
@@ -40,6 +40,11 @@ The list 'descr' is a SIFT^ descriptor which represents the signal shape, and ca
  python setup.py build install
 ```
 
+```
+export LD_LIBRARY_PATH=$OpenCV_DIR:pyeegwave/
+python test.py
+```
+
 ## Ubuntu Installation
 
 # OpenCV
@@ -48,6 +53,7 @@ The list 'descr' is a SIFT^ descriptor which represents the signal shape, and ca
  sudo apt install -y cmake g++ wget unzip
  sudo apt install libgtk2.0-dev pkg-config
  sudo apt install clang2
+ sudo apt install python3-dev python3-venv
  ```
 
 Follow the guidelines from https://docs.opencv.org/master/df/d65/tutorial_table_of_content_introduction.html 

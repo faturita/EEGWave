@@ -12,7 +12,8 @@ OBJSCPP	= $(SRCSCPP:.cpp=.o)
 ifeq ($(shell uname),Darwin)
 	LIBS = -L/opt/local/lib/ -L/usr/local/lib -L$(OPENCV_DIR)/lib/ -lpthread -framework CoreMIDI -framework CoreFoundation -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_features2d -lopencv_xfeatures2d -lopencv_calib3d -lopencv_imgcodecs -lopencv_ml -lopencv_flann -llsl
 else
-	LIBS = -L/usr/local/lib -I/usr/local/include -L/usr/lib/x86_64-linux-gnu/ -lGL -lGLU -lglut -pthread -lbsd -lstk -lasound 
+	CFLAGS=$(CFLAGS) -fPIC
+	LIBS = -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu/ -L$(OPENCV_DIR)/lib/ -pthread -lbsd -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_features2d -lopencv_xfeatures2d -lopencv_calib3d -lopencv_imgcodecs -lopencv_ml -lopencv_flann -llsl
 endif
 
 all: $(PROG)
