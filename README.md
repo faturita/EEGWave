@@ -29,6 +29,16 @@ The list 'descr' is a SIFT^ descriptor which represents the signal shape, and ca
 
 ## Compiling and running
 
+It is better to first create and activate a venv environment
+
+```
+ python3 -venv ew
+ . ./ew/bin/activate
+```
+
+This will allow the module to be installed inside the virtual environment.
+
+
 ```
  make clean
  export OpenCV_DIR=LOCATION
