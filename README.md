@@ -29,14 +29,16 @@ The list 'descr' is a SIFT^ descriptor which represents the signal shape, and ca
 
 ## Mac Installation
 
-  make clean
-  export OpenCV_DIR=LOCATION
-  make
-  make libshared
-  . ./ew/bin/activate # Activate any environment that you may have
-  export DYLD_LIBRARY_PATH=/Users/rramele/opencv/lib
-  cd pyeegwave
-  python setup.py build install
+```
+ make clean
+ export OpenCV_DIR=LOCATION
+ make
+ make libshared
+ . ./ew/bin/activate # Activate any environment that you may have
+ export DYLD_LIBRARY_PATH=/Users/rramele/opencv/lib
+ cd pyeegwave
+ python setup.py build install
+```
 
 ## Ubuntu Installation
 
@@ -73,14 +75,8 @@ Download and unpack sources
  wget https://github.com/sccn/liblsl/releases/download/v1.14.0/liblsl-1.14.0-bionic_amd64.deb
  sudo dpkg -i liblsl-1.14.0-bionic_amd64.deb
  (use https://github.com/sccn/liblsl/releases/download/1.13.0/liblsl-1.13.0-Linux64-bionic.deb for ubuntu 18)
- ```
- 
-# BciSift
-
 ```
- export OpenCV_DIR=~/opencv-master/build
- cmake -DCMAKE_CXX_COMPILER=clang++
- ```
+
 
 ## Refs
 
