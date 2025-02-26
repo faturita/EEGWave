@@ -32,7 +32,7 @@ The list 'descr' is a SIFT^ descriptor which represents the signal shape, and ca
 It is better to first create and activate a venv environment
 
 ```
- python3 -venv ew
+ python3 -m venv ew
  . ./ew/bin/activate
 ```
 
@@ -45,7 +45,6 @@ This will allow the module to be installed inside the virtual environment.
  make
  make libshared
  . ./ew/bin/activate # Activate any environment that you may have
- export DYLD_LIBRARY_PATH=/Users/rramele/opencv/lib
  cd pyeegwave
  python setup.py build install
 ```
