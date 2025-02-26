@@ -60,7 +60,7 @@ python test.py
 # OpenCV
 
 ```
- sudo apt install -y cmake g++ wget unzip
+ sudo apt install -y cmake g++ wget unzip libbsd-dev
  sudo apt install libgtk2.0-dev pkg-config
  sudo apt install clang2
  sudo apt install python3-dev python3-venv

@@ -134,8 +134,6 @@ void testsignals()
  * @param argc
  * @param argv
  * @return
- * export LD_LIBRARY_PATH=/Users/user/work/labstreaminglayer/build/install/lsl_Release/LSL/lib/
- * LD_LIBRARY_PATH=/Users/rramele/work/labstreaminglayer/build/install/LSL/lib
  */
 int main( int argc, char **argv)
 {
@@ -250,25 +248,25 @@ int main( int argc, char **argv)
                 signal[120] =  2*40;
                 signal[132] =  2*40;
                 signal[128] = -50*2;
-                eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,1);
+                eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,j*i);
             }
 
             for(int i=6;i<12;i++)
             {
                 double signal[256];
                 memset(signal,0,sizeof(double)*256);
-                signal[120] = 40;
-                signal[132] = 40;
+                signal[120] = -40;
+                signal[132] = -40;
                 signal[128] = -50;
                 //randomSignal(signal,256,20);
-                eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,1);
+                eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,j*i);
             }
         }
 
         // Joya en este punto puedo tratar de clasificarlos.
-        // classify(descr, trials,3*5,4*5);
+        classify(descr, trials,3*5,4*5);
 
-        // delete [] descr;
+        delete [] descr;
 
     }
 

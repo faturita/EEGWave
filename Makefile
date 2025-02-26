@@ -1,6 +1,6 @@
 OPENCV_DIR=$(OpenCV_DIR)
 CC = g++
-CFLAGS = -O3 -std=c++17 -w -g -Wall -I/usr/include -I/opt/local/include/  -fpermissive -I$(OPENCV_DIR)/include/opencv4/
+CFLAGSb = -O3 -std=c++17 -w -g -Wall -I/usr/include -I/opt/local/include/  -fpermissive -I$(OPENCV_DIR)/include/opencv4/
 PROG = eegwave
 
 SRCSC = src/generic.c src/host.c src/imopv.c src/mathop.c src/random.c  src/sift.c 
@@ -11,9 +11,10 @@ OBJSCPP	= $(SRCSCPP:.cpp=.o)
 
 ifeq ($(shell uname),Darwin)
 	LIBS = -L/opt/local/lib/ -L/usr/local/lib -L$(OPENCV_DIR)/lib/ -lpthread -framework CoreMIDI -framework CoreFoundation -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_features2d -lopencv_xfeatures2d -lopencv_calib3d -lopencv_imgcodecs -lopencv_ml -lopencv_flann -llsl
+	CFLAGS=$(CFLAGSb)
 else
-	CFLAGS=$(CFLAGS) -fPIC
-	LIBS = -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu/ -L$(OPENCV_DIR)/lib/ -pthread -lbsd -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_features2d -lopencv_xfeatures2d -lopencv_calib3d -lopencv_imgcodecs -lopencv_ml -lopencv_flann -llsl
+	CFLAGS=$(CFLAGSb) -fPIC
+	LIBS = -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu/ -L$(OPENCV_DIR)/lib/ 
 endif
 
 all: $(PROG)
