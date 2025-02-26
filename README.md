@@ -44,7 +44,6 @@ This will allow the module to be installed inside the virtual environment.
  export OpenCV_DIR=LOCATION
  make
  make libshared
- . ./ew/bin/activate # Activate any environment that you may have
  cd pyeegwave
  python setup.py build install
 ```
@@ -56,14 +55,22 @@ python test.py
 
 ## Ubuntu Installation
 
-# OpenCV
-
 ```
  sudo apt install -y cmake g++ wget unzip libbsd-dev
  sudo apt install libgtk2.0-dev pkg-config
  sudo apt install clang2
  sudo apt install python3-dev python3-venv
  ```
+
+## Windows Installation
+
+Use WSL https://learn.microsoft.com/en-us/windows/wsl/install and follow ubuntu instructions.
+
+## Mac Installation
+
+Install XCode and accept EULA terms.
+
+# OpenCV compilation
 
 Follow the guidelines from https://docs.opencv.org/master/df/d65/tutorial_table_of_content_introduction.html 
 Download and unpack sources
