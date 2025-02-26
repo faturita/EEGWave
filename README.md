@@ -45,7 +45,6 @@ This will allow the module to be installed inside the virtual environment.
  make
  make libshared
  . ./ew/bin/activate # Activate any environment that you may have
- export DYLD_LIBRARY_PATH=/Users/rramele/opencv/lib
  cd pyeegwave
  python setup.py build install
 ```
