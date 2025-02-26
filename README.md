@@ -32,7 +32,7 @@ The list 'descr' is a SIFT^ descriptor which represents the signal shape, and ca
 It is better to first create and activate a venv environment
 
 ```
- python3 -venv ew
+ python3 -m venv ew
  . ./ew/bin/activate
 ```
 
