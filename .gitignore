@@ -12,3 +12,4 @@ BciSift.pro.user
 Makefile
 .DS_Store
 ew/**/*
+.vscode/*
