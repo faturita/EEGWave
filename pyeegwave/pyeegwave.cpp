@@ -23,8 +23,6 @@ pyeegwave_extract(PyObject *self, PyObject *args)
     //    return NULL;
 
 
-    //sts = system(command);
-
     /* get one argument as a sequence */
     if(!PyArg_ParseTuple(args, "O", &seq))
         return 0;
@@ -34,11 +32,8 @@ pyeegwave_extract(PyObject *self, PyObject *args)
 
 
     float descr[128];
-    double signal[256];
-    
-    memset(signal,0,sizeof(double)*256);
-    signal[120] = signal[132] = 40;
-    signal[128] = -50;
+    double *signal;
+
 
     /* prepare data as an array of doubles */
     seqlen = PySequence_Fast_GET_SIZE(seq);
@@ -46,6 +41,12 @@ pyeegwave_extract(PyObject *self, PyObject *args)
     //    Py_DECREF(seq);
     //    return PyErr_NoMemory(  );
     //}
+
+
+    signal = new double[seqlen];
+    memset(signal,0,sizeof(double)*seqlen);
+
+
     for(i=0; i < seqlen; i++) {
         PyObject *fitem;
         PyObject *item = PySequence_Fast_GET_ITEM(seq, i);
@@ -66,8 +67,7 @@ pyeegwave_extract(PyObject *self, PyObject *args)
     /* clean up, compute, and return result */
     Py_DECREF(seq);
 
-    eegimage(&descr[0],signal,256,256,1,1,true,1);
-
+    xeegimagedescriptor(&descr[0],signal,256,seqlen,1,1,true,1);
 
     int N=128;
     PyObject* python_val = PyList_New(N);
@@ -76,6 +76,8 @@ pyeegwave_extract(PyObject *self, PyObject *args)
         PyObject* pv = Py_BuildValue("f", descr[i]);
         PyList_SetItem(python_val, i, pv);
     }
+
+    delete signal;
 
 
     return python_val;

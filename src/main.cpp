@@ -144,7 +144,7 @@ int main( int argc, char **argv)
 
     if (argc < 2)
     {
-        std::cout << argv[0] << " send | recv | randonline | train | online | udp | testclassify | trainclassify | testsignals | rand " << std::endl;
+        std::cout << argv[0] << " image | testclassifier | send | recv | randonline | train | online | udp | testclassify | trainclassify | testsignals | rand " << std::endl;
         return -1;
     }
 
@@ -154,11 +154,57 @@ int main( int argc, char **argv)
         int Fs = 256;
         double signal[N];
         memset(signal,0,sizeof(double)*N);
-        signal[128] = 20;
+        signal[128] = 1000;
         signal[120] = signal[136] = -1200;
         //randomSignal(signal,512,20);
 
-        ploteegimage(signal,N,240,1,1,true,"1");
+        ploteegimage(signal,N,240,1,1,true,"signalplot");
+    }
+    else if (strcmp(argv[1],"testclassifier")==0)
+    {
+        int words = 7;
+        int charsPerWord = 5;
+        int trials = words * charsPerWord;
+        int timePoints = 128;
+
+        // Each one of the segments corresponds to a row or column of the typical P300 experiment.
+        int segments = 12;
+
+        // 7 words, 5 letters, 12 repetitions / word, 128 time divisions in the signal.
+        //float descr[20][128];
+        float *descr = new float[trials * timePoints * segments];
+        
+        for(int j=0;j<trials;j++)
+        {
+            for(int i=0;i<6;i++)
+            {
+                // Class 1
+                double signal[256];
+                memset(signal,0,sizeof(double)*256);
+                signal[120] =  2*40;
+                signal[132] =  2*40;
+                signal[128] = -50*2;
+                xeegimagedescriptor(&descr[(j*12+i)*128],signal,256,256,1,1,true,1000+j*i);
+            }
+
+            for(int i=6;i<12;i++)
+            {
+                // Class 2
+                double signal[256];
+                memset(signal,0,sizeof(double)*256);
+                signal[120] = -40;
+                signal[132] = -40;
+                signal[128] = -50;
+                //randomSignal(signal,256,20);
+                xeegimagedescriptor(&descr[(j*12+i)*128],signal,256,256,1,1,true,2000+j*i);
+            }
+        }
+
+        // Segments belong to two different classes here.  Let's try to classify them.
+        classify(descr, trials,3*5,4*5);
+
+        delete [] descr;
+
     }
     else
     if (strcmp(argv[1],"send")==0)
@@ -216,7 +262,7 @@ int main( int argc, char **argv)
         signal[120] = signal[136] = -120;
         randomSignal(signal,512,20);
 
-        eegimage(&descr[0],signal,N,240,1,1,false,1);
+        xeegimagedescriptor(&descr[0],signal,240,N,1,1,false,1);
         std::string dummy;
         std::getline(std::cin, dummy);
 
@@ -226,49 +272,7 @@ int main( int argc, char **argv)
             printf("[%6.2f]\n", descr[i]);
 
     }
-    else if (strcmp(argv[1],"rand")==0)
-    {
-        //float descr[20][128];
-        int words = 7;
-        int charsPerWord = 5;
-        int trials = words * charsPerWord;
-        int timePoints = 128;
 
-        // Cada segmento es una fila o una columna del experimento
-        int segments = 12;
-        // 7 Palabras, 5 letras, 12 repeticiones / palabra, 128 divisiones de tiempo en la signal.
-        float *descr = new float[trials * timePoints * segments];
-        
-        for(int j=0;j<trials;j++)
-        {
-            for(int i=0;i<6;i++)
-            {
-                double signal[256];
-                memset(signal,0,sizeof(double)*256);
-                signal[120] =  2*40;
-                signal[132] =  2*40;
-                signal[128] = -50*2;
-                eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,j*i);
-            }
-
-            for(int i=6;i<12;i++)
-            {
-                double signal[256];
-                memset(signal,0,sizeof(double)*256);
-                signal[120] = -40;
-                signal[132] = -40;
-                signal[128] = -50;
-                //randomSignal(signal,256,20);
-                eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,j*i);
-            }
-        }
-
-        // Joya en este punto puedo tratar de clasificarlos.
-        classify(descr, trials,3*5,4*5);
-
-        delete [] descr;
-
-    }
 
 
 

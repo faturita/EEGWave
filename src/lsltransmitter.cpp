@@ -309,7 +309,7 @@ struct SpellerLetter processtrial(float *descr,double gammat, double gamma,doubl
             sign[j] = avg/(counters[i]*1.0F);
         }
 
-        eegimage(&descr[i*128],sign,window, Fs,gammat,gamma,true,i);
+        xeegimagedescriptor(&descr[i*128],sign,window, Fs,gammat,gamma,true,i);
 
     }
 
@@ -427,7 +427,7 @@ void trainclassify()
         signal[120] = signal[132] = 40;
         signal[128] = -50;
         //randomSignal(signal,256,20);
-        eegimage(&descr[(0*12+i)*128],signal,256,256,1,1,true,i);
+        xeegimagedescriptor(&descr[(0*12+i)*128],signal,256,256,1,1,true,i);
         printdescriptor (&descr[(0*12+i)*128]);
     }
 
@@ -466,7 +466,7 @@ void testclassify()
         {
             double signal[256];
             memset(signal,0,sizeof(double)*256);
-            eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,i);
+            xeegimagedescriptor(&descr[(j*12+i)*128],signal,256,256,1,1,true,i);
             printdescriptor (&descr[(j*12+i)*128]);
         }
 
@@ -477,7 +477,7 @@ void testclassify()
             signal[120] = signal[132] = 40;
             signal[128] = -50;
             //randomSignal(signal,256,20);
-            eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,i);
+            xeegimagedescriptor(&descr[(j*12+i)*128],signal,256,256,1,1,true,i);
             printdescriptor (&descr[(j*12+i)*128]);
         }
 
@@ -485,7 +485,7 @@ void testclassify()
         {
             double signal[256];
             memset(signal,0,sizeof(double)*256);
-            eegimage(&descr[(j*12+i)*128],signal,256,256,1,1,true,i);
+            xeegimagedescriptor(&descr[(j*12+i)*128],signal,256,256,1,1,true,i);
             printdescriptor (&descr[(j*12+i)*128]);
         }
 

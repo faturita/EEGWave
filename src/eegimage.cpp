@@ -320,7 +320,7 @@ int ploteegimage(double signal[], int defaultheight, int length, int gammat, int
 
 }
 
-int eegimage(float *descr,double signal[], int defaultheight, int length, int gammat, int gamma, bool normalize, std::string windowname)
+int xeegimagedescriptor(float *descr,double signal[], int defaultheight, int length, int gammat, int gamma, bool normalize, std::string windowname)
 {
 
     int height;
@@ -329,6 +329,7 @@ int eegimage(float *descr,double signal[], int defaultheight, int length, int ga
 
     cv::Mat image;
 
+    // Populate the image based on the provided signal.  Height, Width, Zerolevel are also output parameters.
     eegimage(image, height, width, zerolevel,signal,defaultheight, length, gammat, gamma, normalize, windowname);
 
     double deltaS = sqrt(2.0) * 3.0 * 5.0;
@@ -386,14 +387,14 @@ int eegimage(float *descr,double signal[], int defaultheight, int length, int ga
     return 1;
 }
 
-int eegimage(float *descr,double signal[],int defaultheight, int length, int gammat, int gamma,bool normalize,int windowlabelid)
+int xeegimagedescriptor(float *descr,double signal[],int defaultheight, int length, int gammat, int gamma,bool normalize,int windowlabelid)
 {
     // 1 La imagen queda igual
     // 2 La imagen se ajusta a toda la pantalla y se resizea.
     char buff[100];
     snprintf(buff, sizeof(buff), "%d", windowlabelid);
     std::string windowname = buff;
-    int ret = eegimage(descr,signal,defaultheight, length, gammat, gamma, normalize, windowname);
+    int ret = xeegimagedescriptor(descr,signal,defaultheight, length, gammat, gamma, normalize, windowname);
 
     cv::moveWindow(windowname, 300*(windowlabelid % 4),10+250*(windowlabelid / 4));
 
@@ -403,7 +404,7 @@ int eegimage(float *descr,double signal[],int defaultheight, int length, int gam
 int eegimage(double signal[],int defaultheight, int length, int gammat, int gamma,bool normalize, int label)
 {
     float descr[128];
-    return eegimage(descr,signal,defaultheight,length, gammat, gamma,normalize,label);
+    return xeegimagedescriptor(descr,signal,defaultheight,length, gammat, gamma,normalize,label);
 }
 
 
