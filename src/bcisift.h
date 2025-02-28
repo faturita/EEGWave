@@ -8,5 +8,6 @@ struct result
     int hits;
 };
 
+result sift(cv::Mat image, const int imageheight, const int imagewidth, int edgeresponse, std::vector<int> event);
 
 #endif // BCISIFT_H

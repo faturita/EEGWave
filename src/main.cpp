@@ -71,7 +71,7 @@ int madin(int argc, char *argv[])
 
        char filename[256];
 
-       sprintf(filename,"C:\\Users\\rramele\\Desktop\\Data\\Rodrigo\\Baseline\\e.%d.l.1.dat", fileid);
+       sprintf(filename,"file%d.dat", fileid);
        std::ifstream infile(filename);
 
        infile >> c;
@@ -90,16 +90,13 @@ int madin(int argc, char *argv[])
            field++;
            if (!(infile >> c))
            {
-               sprintf(filename,"C:\\Users\\rramele\\Desktop\\Data\\Rodrigo\\Baseline\\e.%d.l.1.dat", fileid++);
+               sprintf(filename,"file%d.dat", fileid++);
                infile = std::ifstream(filename);
            }
        }
        infile.close();
 
     return 1;
-    //return eeglogger("Romulo", "Romulo", 40);
-
-    //return bcisift(option);
 
 }
 
@@ -219,8 +216,8 @@ int main( int argc, char **argv)
     {
         for(int i=0;i<256*10;i++)
         {
-            //eegimage(0,randInt2(50-6,50+6)-50);
-            eegimage(0,0);
+            eegimage(0,randInt2(50-16,50+16)-50);
+            //eegimage(0,0);
         }
     }
     else if (strcmp(argv[1],"train")==0)
@@ -234,9 +231,6 @@ int main( int argc, char **argv)
     else if (strcmp(argv[1],"udp")==0)
     {
         udp();
-    }
-    else if (strcmp(argv[1],"dsp")==0)
-    {
     }
     else if (strcmp(argv[1],"testclassify")==0)
     {

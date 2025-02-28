@@ -7,6 +7,8 @@
 
 int eegimage(double avg, double data);
 
+int eegiamage(double avg, double datapoint);
+
 int eegimage(double signal[], int length, int defaultheight, int gammat, int gamma, bool normalize, int label);
 
 int xeegimagedescriptor(float *descr,double signal[], int defaultheight, int length, int gammat, int gamma, bool normalize, int label);

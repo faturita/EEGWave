@@ -1,13 +1,15 @@
 /**
+ * eegimage(&descr[0],signal,defaulthiehgt,signallength,gammat,gamma,normalization,imageid);
  * 
-eegimage(&descr[0],signal,alturaimagen,longitudseñal,gammat,gamma,true,1);
-
-alturaimagen: la altura por default de la imagen
-longitudseñal: el largo de la señal
-1:  Factor escalado en el tiempo
-1:  Factor escalado en la amplitud
-true/false: si aplica o no el normalizado por zscore
-1: el último número indica el nombre que le pone al archivo png donde te muestra cómo se genera la imágen.  Si cambias este número podés generar diferentes archivos. 
+ * descr: descriptor.  Float array of 128 elements.  Captures the shape of the waveform.
+ * signal: the signal to be analyzed.
+ * defaultheight: the default height of the image.  This is going to be adjusted based on the peak-to-peak value of the signal.
+ * signallength: the length of the signal.
+ * gammat: the time scaling factor.  The image is going to be gammat times the length of the signal.
+ * gamma: the amplitude scaling factor.  The image is going to be gamma times the peak-to-peak value of the signal.
+ * normalization: if true, the signal is going to be normalized using the z-score.
+ * imageid: the id of the image.  This is used as the name of the generared png file.
+ * 
  */
 #include <iostream>
 #include <fstream>
@@ -408,6 +410,10 @@ int eegimage(double signal[],int defaultheight, int length, int gammat, int gamm
 }
 
 
+//
+// This function is used to plot the EEG signal in real time.
+// It is handy to check how the signal looks in the plot.
+//
 int eegimage(double avg, double datapoint)
 {
     // 1 La imagen queda igual
@@ -484,9 +490,8 @@ int eegiamage(double avg, double datapoint)
 {
     int option = 1;
 
-    // 1 La imagen queda igual
-    // 2 La imagen se ajusta a toda la pantalla y se resizea.
-    cv::namedWindow("BrainWaves",2);
+    cv::namedWindow("BrainWaves",cv::WINDOW_NORMAL);
+    //cv::setWindowProperty("BrainWaves", cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN);
 
     static cv::Point pt1(1,imageheight/2);
     static cv::Point pt2(1+timestep,imageheight/2);
@@ -501,7 +506,7 @@ int eegiamage(double avg, double datapoint)
     cv::line(image, pt1, pt2,color);
 
 
-    int key = cv::waitKey(3000);
+    int key = cv::waitKey(1);
 
     switch (key)
     {

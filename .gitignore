@@ -13,3 +13,4 @@ Makefile
 .DS_Store
 ew/**/*
 .vscode/*
+eegwave

@@ -1,12 +1,11 @@
 # EEGWave 
 
-This program takes a monochannel signal, a time series of doubles, and converts that signal into an image, a standardized plot.  It takes the image and use a variant of the SIFT descriptor to capture their visual shape and retuns a descriptor which represents that shape.
+EEGWave takes an EEG signal, a time series of doubles, and converts that signal into an image, a standardized plot.  It can take the image and extract scale invariant features that represent the waveform contained within the signal.  
 
 ![SIFT](images/sift.png)
 ![SIFT](images/sift2.png)
 
-It is aimed to be used in Neuroscience research and applications. This allows to search or compare against specific templates and to verify
-if wavepatterns are presented in a given signal segment.
+It is aimed to be used in Neuroscience research and applications. This allows to search or compare against specific templates and to verify if wavepatterns are presented in a given signal segment.
 
 The library uses:
 
@@ -42,6 +41,7 @@ This will allow the module to be installed inside the virtual environment.
 ```
  make clean
  export OpenCV_DIR=LOCATION
+ export LD_LIBRARY_PATH=$OpenCV_DIR/lib:pyeegwave/
  make
  make libshared
  cd pyeegwave
@@ -49,15 +49,15 @@ This will allow the module to be installed inside the virtual environment.
 ```
 
 ```
-export LD_LIBRARY_PATH=$OpenCV_DIR:pyeegwave/
+export LD_LIBRARY_PATH=$OpenCV_DIR/lib:pyeegwave/
 python test.py
 ```
 
 ## Ubuntu Installation
 
 ```
- sudo apt install -y cmake g++ wget unzip libbsd-dev
- sudo apt install libgtk2.0-dev pkg-config
+ sudo apt install -y cmake g++ wget unzip libbsd-dev pkg-config
+ sudo apt install libgtk2.0-dev libcanberra-gtk-module libcanberra-gtk3-module
  sudo apt install clang2
  sudo apt install python3-dev python3-venv
  ```
