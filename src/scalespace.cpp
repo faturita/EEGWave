@@ -10,7 +10,7 @@
 #include <opencv2/features2d.hpp>
 #include <opencv2/xfeatures2d.hpp>
 
-
+bool show = false;
 
 
 /**
@@ -50,7 +50,7 @@ cv::Mat scalespace(std::string name, cv::Mat image, const int imageheight, const
 
     GaussianBlur( image, featureImage, cv::Size( size, size ), sigma, sigma );
 
-    cv::imshow(name, featureImage);
+    if (show) cv::imshow(name, featureImage);
 
     return featureImage;
 }
@@ -270,13 +270,13 @@ cv::Mat heatup(cv::Mat image, float threshold=20, float heat=150)
     return image;
 }
 
-
+// Computes the gradient of src image (src is a grayscale image !)
 cv::Mat grad(cv::Mat src)
 {
     cv::Mat src_gray;
     cv::Mat grad;
 
-    std::string window_name = "Sobel Demo - Simple Edge Detector";
+    std::string window_name = "Gradients";
     int scale = 1;
     int delta = 0;
     int ddepth = CV_16S;
@@ -287,12 +287,15 @@ cv::Mat grad(cv::Mat src)
     { return src; }
 
     cv::GaussianBlur( src, src, cv::Size(3,3), 0, 0, cv::BORDER_DEFAULT );
-
-    /// Convert it to gray
-    cv::cvtColor( src, src_gray, cv::COLOR_BGR2GRAY );
+    
+    /// Convert it to gray (@NOTE: This is not necessary with eegimages)
+    if (src.channels() == 3)
+        cv::cvtColor( src, src_gray, cv::COLOR_BGR2GRAY );
+    else
+        src_gray = src;
 
     /// Create window
-    cv::namedWindow( window_name, cv::WindowFlags::WINDOW_AUTOSIZE );
+    if (show) cv::namedWindow( window_name, cv::WindowFlags::WINDOW_AUTOSIZE );
 
     /// Generate grad_x and grad_y
     cv::Mat grad_x, grad_y;
@@ -310,9 +313,9 @@ cv::Mat grad(cv::Mat src)
 
     /// Total Gradient (approximate)
     addWeighted( abs_grad_x, 0.5, abs_grad_y, 0.5, 0, grad );
-    imshow( window_name, grad );
+    if (show) imshow( window_name, grad );
 
-    cv::waitKey(0);
+    //cv::waitKey(0);
 
     // Returning to avoid warning, this might not be correct
     return grad;
@@ -330,9 +333,10 @@ cv::Mat findkeypoint(int octave, cv::Mat image, const int imageheight, const int
 
     std::string wtitle ( octave,'-');
 
+    // First pick the gradient image at this octave.
     grad(image);
 
-    // Primera octava, son 5 escalas.
+    // For each octave, there are 5 scalespace images (5 blurred versions of the image)
     images.push_back(scalespace(wtitle + "1",image,imageheight, imagewidth, pow(2,octave-1)*pow(sqrt(2),1)/(1.6*2)));
     images.push_back(scalespace(wtitle + "2",image,imageheight, imagewidth, pow(2,octave-1)*pow(sqrt(2),2)/(1.6*2)));
     images.push_back(scalespace(wtitle + "3",image,imageheight, imagewidth, pow(2,octave-1)*pow(sqrt(2),3)/(1.6*2)));
@@ -342,6 +346,7 @@ cv::Mat findkeypoint(int octave, cv::Mat image, const int imageheight, const int
     // As per the Lowe's paper, it is the third image from top the one who you will use to create the next octave
     cv::Mat Vnspo = images[4];
 
+    // Calculate the difference of Gaussian
     DoG.push_back(images[1]-images[0]);
     DoG.push_back(images[2]-images[1]);
     DoG.push_back(images[3]-images[2]);
@@ -349,6 +354,7 @@ cv::Mat findkeypoint(int octave, cv::Mat image, const int imageheight, const int
 
     cv::Mat tmp = DoG[1];
 
+    // Show extrema results on the differences of gaussians.
     showextrema(DoG[0],1);
     showextrema(DoG[1],2);
     showextrema(DoG[2],3);

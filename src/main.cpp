@@ -6,6 +6,8 @@
 #include "lsl.h"
 #include "plotprocessing.h"
 #include "decoder.h"
+#include "detector.h"
+#include "bcisift.h"
 
 
 int  eeglogger(char *filename, char *subject, int duration);
@@ -16,9 +18,9 @@ int randInt2(int low, int high)
     return rand() % ((high + 1) - low) + low;
 }
 
-void randomSignal(double *signal, int window, int variance)
+void randomSignal(double *signal, int signallength, int variance)
 {
-    for(int i=0;i<window;i++)
+    for(int i=0;i<signallength;i++)
     {
         signal[i] = randInt2(50-variance,50+variance)-50;
     }
@@ -134,17 +136,49 @@ void testsignals()
  */
 int main( int argc, char **argv)
 {
-    //comparesignals(1,31,2,1,1,231,2,1);
-    //comparehits();
-    //process();
-    //testdsp();
-
     if (argc < 2)
     {
         std::cout << argv[0] << " image | testclassifier | send | recv | randonline | train | online | udp | testclassify | trainclassify | testsignals | rand " << std::endl;
         return -1;
     }
 
+
+    // I need first to create a signal file similar to what I use in CLAS with the same structure.
+    // Then I need to read that file and allow the detection of features.
+    // Then I need to read the file and use the detection and map a signal
+
+
+    if (strcmp(argv[1],"detector")==0)
+    {
+        //bcisift(4);
+        srand(time(NULL));
+        // Detector Sample
+        //  The detector gives me the probability on a signal segment that something interesting is happening
+        //  To do so I can call the feature detector of handmadesift, pick all the extrema, build a pdf with all 
+        //  of them and find the max value on the pdf.
+        int N =512;
+        int Fs = 256;
+        double signal[N];
+        memset(signal,0,sizeof(double)*N);
+
+        randomSignal(signal,512,100);
+        signal[128] = 320;
+        signal[350] = signal[400] = -320;
+
+        std::vector<int> events = detectevents(signal,512);
+
+        memset(signal,0,sizeof(double)*N);
+        for(int i=0;i<events.size();i++)
+        {
+            signal[events[i]] -= 200;
+        }
+
+        ploteegimage(signal,240,N,1,1,true,"plot");
+
+
+
+    }
+    else
     if (strcmp(argv[1],"image")==0)
     {
         int N =256;
@@ -254,7 +288,7 @@ int main( int argc, char **argv)
         memset(signal,0,sizeof(double)*N);
         signal[128] = 20;
         signal[120] = signal[136] = -120;
-        randomSignal(signal,512,20);
+        randomSignal(signal,512,20); // @FIXME check the window size if exceeds the size of the array
 
         xeegimagedescriptor(&descr[0],signal,240,N,1,1,false,1);
         std::string dummy;

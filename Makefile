@@ -4,7 +4,7 @@ CFLAGSb = -O3 -std=c++17 -w -g -Wall -I/usr/include -I/opt/local/include/  -fper
 PROG = eegwave
 
 SRCSC = src/generic.c src/host.c src/imopv.c src/mathop.c src/random.c  src/sift.c 
-SRCSCPP = src/bcisift.cpp src/serializer.cpp src/decoder.cpp src/lsl.cpp src/lsltransmitter.cpp src/plotprocessing.cpp src/scalespace.cpp src/unp.cpp src/eegimage.cpp src/main.cpp 
+SRCSCPP = src/bcisift.cpp src/detector.cpp src/serializer.cpp src/decoder.cpp src/lsl.cpp src/lsltransmitter.cpp src/plotprocessing.cpp src/scalespace.cpp src/unp.cpp src/eegimage.cpp src/main.cpp 
 
 OBJSC 	= $(SRCSC:.c=.o)
 OBJSCPP	= $(SRCSCPP:.cpp=.o)

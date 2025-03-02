@@ -8,6 +8,8 @@ struct result
     int hits;
 };
 
-result sift(cv::Mat image, const int imageheight, const int imagewidth, int edgeresponse, std::vector<int> event);
+std::vector<int> scaledetector(cv::Mat image, const int imageheight, const int imagewidth, const int numOctaves);
+
+int bcisift(int option);
 
 #endif // BCISIFT_H

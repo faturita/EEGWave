@@ -47,11 +47,48 @@ cv::Mat findkeypoint(int octave, cv::Mat image, const int imageheight, const int
 
 const int thresh = 20;
 
+std::vector<int> scaledetector(cv::Mat image, const int imageheight, const int imagewidth, const int numOctaves)
+{
+    cv::Mat Vnspo;
+
+    std::vector<int> detections;
+    
+    image.copyTo(Vnspo);
+
+    std::vector<cv::Point> extrema;
+    cv::Scalar color(255,255,255);
+
+    int hits=0;
+
+    for(int octaves=1;octaves<numOctaves+1;octaves++)
+    {
+        Vnspo = findkeypoint(octaves, Vnspo, imageheight/pow(2,octaves-1), imagewidth/pow(2,octaves-1), extrema);
+
+        for(unsigned int i=0;i<extrema.size();i++)
+        {
+            if (extrema[i].x > 0 && extrema[i].y > 0)
+            {
+                std::cout << "Extrema[" << i << "]:" << extrema[i] << std::endl;
+                double radi=10;
+                cv::circle(image,extrema[i],radi,color);
+
+                detections.push_back(extrema[i].x);
+
+            }
+        }
+    }
+
+    std::cout << "Size:" << extrema.size() << std::endl;
+
+    return detections;
+}
 
 
 result handmadesift(cv::Mat image, const int imageheight, const int imagewidth, const int numOctaves, std::vector<int> event)
 {
-    cv::Mat Vnspo=image;
+    cv::Mat Vnspo;
+    
+    image.copyTo(Vnspo);
 
     std::vector<cv::Point> extrema;
     cv::Scalar color(255,255,255);
