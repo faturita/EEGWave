@@ -124,7 +124,39 @@ void testsignals()
     }
 }
 
+int getMinValue(double *signal, int signallength)
+{
+    int pos = 0;
+    double min = signal[0];
 
+    for(int i=1;i<signallength;i++)
+    {
+        if (signal[i] < min)
+        {
+            min = signal[i];
+            pos = i;
+        }
+    }
+
+    return pos;
+}
+
+void clusterize(double *signal, int signallength)
+{
+    int pos = 0;
+    double kernel[3] = {1,1,1};
+
+    double *signcopy = new double[signallength];
+    memcpy(signcopy,signal,sizeof(double)*signallength);
+
+    for(int i=1;i<signallength-1;i++)
+    {
+        signal[i] = (signcopy[i-1]*kernel[0] + signcopy[i]*kernel[1] + signcopy[i+1]*kernel[2]);
+    }
+
+    delete [] signcopy;
+
+}
 
 
 
@@ -175,7 +207,13 @@ int main( int argc, char **argv)
 
         ploteegimage(signal,240,N,1,1,true,"plot");
 
+        clusterize(signal,512);
 
+        ploteegimage(signal,240,N,1,1,false,"plot2");
+
+        int pos = getMinValue(signal,512);
+
+        std::cout << "Event found at:" << pos << std::endl;
 
     }
     else
